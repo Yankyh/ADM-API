@@ -9,6 +9,6 @@ namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Repositories
 {
     public interface IUserRepository : IRepositoryBase<User>
     {
-
+        Task<User> GetByName(string name);
     }
 }
