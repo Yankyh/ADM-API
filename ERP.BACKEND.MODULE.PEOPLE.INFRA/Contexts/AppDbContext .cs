@@ -18,6 +18,7 @@ namespace ERP.BACKEND.MODULE.PERSON.INFRA.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Person>().ToTable("Person");
+            modelBuilder.Entity<User>().ToTable("User");
         }
     }
 }
