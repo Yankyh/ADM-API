@@ -67,9 +67,7 @@ namespace ERP.BACKEND.MODULE.PERSON.INFRA.Repositories
         {
             var entity = await appDbContext.Set<TEntity>().FirstOrDefaultAsync(x => x.Id == id);
 
-#pragma warning disable CS8603 // Possible null reference return.
             return entity;
-#pragma warning restore CS8603 // Possible null reference return.
         }
 
         public async Task<TEntity> Update(TEntity entity)

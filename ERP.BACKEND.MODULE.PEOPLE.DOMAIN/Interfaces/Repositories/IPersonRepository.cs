@@ -9,6 +9,5 @@ namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Repositories
 {
     public interface IPersonRepository : IRepositoryBase<Person>
     {
-
     }
 }

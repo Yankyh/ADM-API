@@ -18,27 +18,27 @@ namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Services
             this.repository = repositorio;
         }
 
-        public async Task<TEntity> Update(TEntity entity)
+        public virtual async Task<TEntity> Update(TEntity entity)
         {
             return await repository.Update(entity);
         }
 
-        public async Task<bool> Delete(Guid id)
+        public virtual async Task<bool> Delete(Guid id)
         {
            return await repository.Delete(id);
         }
 
-        public async Task<Guid> Add(TEntity entity)
+        public virtual async Task<Guid> Add(TEntity entity)
         {
             return await repository.Add(entity);
         }
 
-        public Task<TEntity> GetById(Guid id)
+        public virtual Task<TEntity> GetById(Guid id)
         {
             return repository.GetById(id);
         }
 
-        public Task<IEnumerable<TEntity>> SelectAll()
+        public virtual Task<IEnumerable<TEntity>> SelectAll()
         {
             return repository.GetAll();
         }

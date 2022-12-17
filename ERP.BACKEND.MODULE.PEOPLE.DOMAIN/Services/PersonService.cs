@@ -15,6 +15,5 @@ namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Services
         {
 
         }
-
     }
 }
