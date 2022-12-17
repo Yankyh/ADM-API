@@ -10,9 +10,9 @@ namespace ERP.BACKEND.MODULE.PEOPLE.Controllers
     [ApiController]
     [Route("api/[controller]")]
 
-    public class PeopleController : BaseController<People, PeopleDTO>
+    public class PersonController : BaseController<Person, PersonDTO>
     {
-        public PeopleController(IPeopleApplication app) : base(app)
+        public PersonController(IPersonApplication app) : base(app)
         { }
     }
 }

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ERP.BACKEND.MODULE.PEOPLE.APPLICATION.DTOs
 {
-    public class PeopleDTO : BaseDTO
+    public class PersonDTO : BaseDTO
     {
         public string Name { get; set; }
         public string? CorporateName { get; set; }

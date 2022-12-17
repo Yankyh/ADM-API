@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ERP.BACKEND.MODULE.PEOPLE.INFRA.Repositories
 {
-    public class PratoRepositorio : RepositoryBase<People>, IPratoRepositorio
+    public class PratoRepositorio : RepositoryBase<Person>, IPratoRepositorio
     {
         public PratoRepositorio(AppDbContext appDbContext)
             : base(appDbContext)

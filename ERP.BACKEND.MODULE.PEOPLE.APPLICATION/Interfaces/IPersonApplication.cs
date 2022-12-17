@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ERP.BACKEND.MODULE.PEOPLE.APPLICATION.Interfaces
 {
-    public interface IPeopleApplication : IApplicationBase<People, PeopleDTO>
+    public interface IPersonApplication : IApplicationBase<Person, PersonDTO>
     {
     }
 }

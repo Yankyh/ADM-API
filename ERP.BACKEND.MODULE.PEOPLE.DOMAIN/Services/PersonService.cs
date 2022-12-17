@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace ERP.BACKEND.MODULE.PEOPLE.DOMAIN.Services
 {
-    public class PeopleService : ServiceBase<People>, IPeopleService
+    public class PersonService : ServiceBase<Person>, IPersonService
     {
-        public PeopleService(IPeopleRepository repositorio) : base(repositorio)
+        public PersonService(IPersonRepository repositorio) : base(repositorio)
         {
 
         }

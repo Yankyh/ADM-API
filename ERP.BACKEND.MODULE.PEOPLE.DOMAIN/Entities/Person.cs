@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ERP.BACKEND.MODULE.PEOPLE.DOMAIN.Entities
 {
-    public class People : EntityBase
+    public class Person : EntityBase
     {
         public string Name { get; set; }
         public string? CorporateName { get; set; }

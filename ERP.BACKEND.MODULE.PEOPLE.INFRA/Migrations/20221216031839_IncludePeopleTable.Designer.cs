@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ERP.BACKEND.MODULE.PEOPLE.INFRA.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20221216031839_IncludePeopleTable")]
-    partial class IncludePeopleTable
+    [Migration("20221216031839_IncludePersonTable")]
+    partial class IncludePersonTable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,7 +25,7 @@ namespace ERP.BACKEND.MODULE.PEOPLE.INFRA.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("ERP.BACKEND.MODULE.PEOPLE.DOMAIN.Models.People.People", b =>
+            modelBuilder.Entity("ERP.BACKEND.MODULE.PEOPLE.DOMAIN.Models.Person.Person", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -56,7 +56,7 @@ namespace ERP.BACKEND.MODULE.PEOPLE.INFRA.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("People", (string)null);
+                    b.ToTable("Person", (string)null);
                 });
 #pragma warning restore 612, 618
         }

@@ -6,13 +6,13 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ERP.BACKEND.MODULE.PEOPLE.INFRA.Migrations
 {
     /// <inheritdoc />
-    public partial class IncludePeopleTable : Migration
+    public partial class IncludePersonTable : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "People",
+                name: "Person",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -26,7 +26,7 @@ namespace ERP.BACKEND.MODULE.PEOPLE.INFRA.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_People", x => x.Id);
+                    table.PrimaryKey("PK_Person", x => x.Id);
                 });
         }
 
@@ -34,7 +34,7 @@ namespace ERP.BACKEND.MODULE.PEOPLE.INFRA.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "People");
+                name: "Person");
         }
     }
 }

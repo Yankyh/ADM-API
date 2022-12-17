@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ERP.BACKEND.MODULE.PEOPLE.DOMAIN.Interfaces.Repositories
 {
-    public interface IPeopleRepository : IRepositoryBase<People>
+    public interface IPersonRepository : IRepositoryBase<Person>
     {
 
     }

@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace ERP.BACKEND.MODULE.PEOPLE.INFRA.Mapping
 {
-    public class PeopleMap : BaseMap<People>
+    public class PersonMap : BaseMap<Person>
     {
-        public override void Configure(EntityTypeBuilder<People> builder)
+        public override void Configure(EntityTypeBuilder<Person> builder)
         {
             base.Configure(builder);
             builder.ToTable("PEOPLE");

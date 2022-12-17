@@ -12,9 +12,9 @@ using System.Threading.Tasks;
 
 namespace ERP.BACKEND.MODULE.PEOPLE.APPLICATION.Services
 {
-    public class PeopleApplication : ServiceApplicationBase<People, PeopleDTO>, IPeopleApplication
+    public class PersonApplication : ServiceApplicationBase<Person, PersonDTO>, IPersonApplication
     {
-        public PeopleApplication(IMapper iMapper, IPeopleService service) : base(iMapper, (IServiceBase<People>)service)
+        public PersonApplication(IMapper iMapper, IPersonService service) : base(iMapper, (IServiceBase<Person>)service)
         {
 
         }

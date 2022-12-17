@@ -11,9 +11,9 @@ using System.Threading.Tasks;
 
 namespace ERP.BACKEND.MODULE.PEOPLE.INFRA.Repositories
 {
-    public class PeopleRepository : RepositoryBase<People>, IPeopleRepository
+    public class PersonRepository : RepositoryBase<Person>, IPersonRepository
     {
-        public PeopleRepository(AppDbContext appDbContext) : base(appDbContext)
+        public PersonRepository(AppDbContext appDbContext) : base(appDbContext)
         {
         }
     }

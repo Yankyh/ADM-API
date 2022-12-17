@@ -14,8 +14,8 @@ namespace ERP.BACKEND.MODULE.PEOPLE.APPLICATION.Mapping
     {
         public EntityMapping()
         {
-            CreateMap<People, PeopleDTO>();
-            CreateMap<PeopleDTO, People>();
+            CreateMap<Person, PersonDTO>();
+            CreateMap<PersonDTO, Person>();
         }
     }
 }

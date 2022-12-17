@@ -21,21 +21,21 @@ namespace ERP.BACKEND.MODULE.PEOPLE.APPLICATION.DependencyInjection
         public static void Configure(IServiceCollection services, string conection)
         {
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(conection));
-          //  services.AddScoped(typeof(IRepository<People>), typeof(PeopleRepository));
+          //  services.AddScoped(typeof(IRepository<Person>), typeof(PersonRepository));
            // services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-            //services.AddScoped(typeof(PeopleService));
+            //services.AddScoped(typeof(PersonService));
 
             //Aplicação
             services.AddScoped(typeof(IApplicationBase<,>), typeof(ServiceApplicationBase<,>));
-            services.AddScoped<IPeopleApplication, PeopleApplication>();
+            services.AddScoped<IPersonApplication, PersonApplication>();
 
             //Domínio
             services.AddScoped(typeof(IServiceBase<>), typeof(ServiceBase<>));
-            services.AddScoped<IPeopleService, PeopleService>();
+            services.AddScoped<IPersonService, PersonService>();
 
             //Repositorio
             services.AddScoped(typeof(IRepositoryBase<>), typeof(RepositoryBase<>));
-            services.AddScoped<IPeopleRepository, PeopleRepository>();
+            services.AddScoped<IPersonRepository, PersonRepository>();
             services.AddScoped<IPratoRepositorio, PratoRepositorio>();
         }
     }

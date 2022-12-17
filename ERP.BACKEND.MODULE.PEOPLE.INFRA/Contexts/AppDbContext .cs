@@ -13,11 +13,11 @@ namespace ERP.BACKEND.MODULE.PEOPLE.INFRA.Contexts
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
         }
-        public DbSet<People> People { get; set; }
+        public DbSet<Person> Person { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<People>().ToTable("People");
+            modelBuilder.Entity<Person>().ToTable("Person");
         }
     }
 }
