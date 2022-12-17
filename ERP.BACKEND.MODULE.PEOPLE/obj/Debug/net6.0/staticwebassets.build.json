@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "T9HVUlDZOgv3H4+hC17g8ti3OTvVxjXm6SHxIKQfMTE=",
-  "Source": "ERP.BACKEND.MODULE.PEOPLE",
-  "BasePath": "_content/ERP.BACKEND.MODULE.PEOPLE",
+  "Hash": "T/PnZiiWnWm9eZ2o+kH1oITxoUYH+9rs7JXtkFVFc10=",
+  "Source": "ERP.BACKEND.MODULE.PERSON",
+  "BasePath": "_content/ERP.BACKEND.MODULE.PERSON",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

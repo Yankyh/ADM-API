@@ -1,4 +1,4 @@
-namespace ERP.BACKEND.MODULE.PEOPLE
+namespace ERP.BACKEND.MODULE.PERSON
 {
     public class WeatherForecast
     {
