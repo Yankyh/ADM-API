@@ -1,11 +1,10 @@
-﻿using ERP.BACKEND.MODULE.PEOPLE.APPLICATION.DependencyInjection;
-using ERP.BACKEND.MODULE.PEOPLE.APPLICATION.Mapping;
-using ERP.BACKEND.MODULE.PEOPLE.INFRA.Contexts;
+﻿using ERP.BACKEND.MODULE.PERSON.APPLICATION.DependencyInjection;
+using ERP.BACKEND.MODULE.PERSON.APPLICATION.Mapping;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
-namespace ERP.BACKEND.MODULE.PEOPLE
+namespace ERP.BACKEND.MODULE.PERSON
 {
     public class Startup
     {

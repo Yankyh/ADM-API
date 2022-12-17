@@ -318,9 +318,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\ERP.BACKEND.MODULE.PEOPLE\\ERP.BACKEND.MODULE.PEOPLE.COMMON\\ERP.BACKEND.MODULE.PEOPLE.COMMON.csproj",
-      "projectName": "ERP.BACKEND.MODULE.PEOPLE.COMMON",
-      "projectPath": "C:\\Users\\Administrator\\source\\repos\\ERP.BACKEND.MODULE.PEOPLE\\ERP.BACKEND.MODULE.PEOPLE.COMMON\\ERP.BACKEND.MODULE.PEOPLE.COMMON.csproj",
+      "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\ERP.BACKEND.MODULE.PEOPLE\\ERP.BACKEND.MODULE.PEOPLE.COMMON\\ERP.BACKEND.MODULE.PERSON.COMMON.csproj",
+      "projectName": "ERP.BACKEND.MODULE.PERSON.COMMON",
+      "projectPath": "C:\\Users\\Administrator\\source\\repos\\ERP.BACKEND.MODULE.PEOPLE\\ERP.BACKEND.MODULE.PEOPLE.COMMON\\ERP.BACKEND.MODULE.PERSON.COMMON.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Administrator\\source\\repos\\ERP.BACKEND.MODULE.PEOPLE\\ERP.BACKEND.MODULE.PEOPLE.COMMON\\obj\\",
       "projectStyle": "PackageReference",

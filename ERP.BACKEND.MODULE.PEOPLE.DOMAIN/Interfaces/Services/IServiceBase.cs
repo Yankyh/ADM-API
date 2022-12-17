@@ -1,11 +1,11 @@
-﻿using ERP.BACKEND.MODULE.PEOPLE.DOMAIN.Entities;
+﻿using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ERP.BACKEND.MODULE.PEOPLE.DOMAIN.Interfaces.Services
+namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Services
 {
     public interface IServiceBase<TEntidade> where TEntidade : EntityBase
     {

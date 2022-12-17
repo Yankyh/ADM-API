@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ERP.BACKEND.MODULE.PEOPLE.APPLICATION.DTOs
+namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs
 {
     public class BaseDTO
     {

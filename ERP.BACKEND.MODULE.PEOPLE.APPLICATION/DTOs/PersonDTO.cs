@@ -1,7 +1,7 @@
-﻿using ERP.BACKEND.MODULE.PEOPLE.COMMON.Enums;
+﻿using ERP.BACKEND.MODULE.PERSON.COMMON.Enums;
 using System.ComponentModel.DataAnnotations;
 
-namespace ERP.BACKEND.MODULE.PEOPLE.APPLICATION.DTOs
+namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs
 {
     public class PersonDTO : BaseDTO
     {

@@ -1,10 +1,10 @@
-﻿using ERP.BACKEND.MODULE.PEOPLE.APPLICATION.DTOs;
-using ERP.BACKEND.MODULE.PEOPLE.APPLICATION.Interfaces;
-using ERP.BACKEND.MODULE.PEOPLE.DOMAIN.Entities;
+﻿using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs;
+using ERP.BACKEND.MODULE.PERSON.APPLICATION.Interfaces;
+using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
 using Microsoft.AspNetCore.Mvc;
 using static System.Net.Mime.MediaTypeNames;
 
-namespace ERP.BACKEND.MODULE.PEOPLE.Controllers
+namespace ERP.BACKEND.MODULE.PERSON.Controllers
 {
     [Produces("application/json")]
     [Route("api/[controller]")]

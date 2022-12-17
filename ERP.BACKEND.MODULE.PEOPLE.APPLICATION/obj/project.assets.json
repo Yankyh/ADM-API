@@ -1185,50 +1185,49 @@
           }
         }
       },
-      "ERP.BACKEND.MODULE.PEOPLE.COMMON/1.0.0": {
+      "ERP.BACKEND.MODULE.PERSON.COMMON/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0"
         },
         "compile": {
-          "bin/placeholder/ERP.BACKEND.MODULE.PEOPLE.COMMON.dll": {}
+          "bin/placeholder/ERP.BACKEND.MODULE.PERSON.COMMON.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ERP.BACKEND.MODULE.PEOPLE.COMMON.dll": {}
+          "bin/placeholder/ERP.BACKEND.MODULE.PERSON.COMMON.dll": {}
         }
       },
-      "ERP.BACKEND.MODULE.PEOPLE.DOMAIN/1.0.0": {
+      "ERP.BACKEND.MODULE.PERSON.DOMAIN/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
-          "ERP.BACKEND.MODULE.PEOPLE.COMMON": "1.0.0",
+          "ERP.BACKEND.MODULE.PERSON.COMMON": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.1"
         },
         "compile": {
-          "bin/placeholder/ERP.BACKEND.MODULE.PEOPLE.DOMAIN.dll": {}
+          "bin/placeholder/ERP.BACKEND.MODULE.PERSON.DOMAIN.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ERP.BACKEND.MODULE.PEOPLE.DOMAIN.dll": {}
+          "bin/placeholder/ERP.BACKEND.MODULE.PERSON.DOMAIN.dll": {}
         }
       },
-      "ERP.BACKEND.MODULE.PEOPLE.INFRA/1.0.0": {
+      "ERP.BACKEND.MODULE.PERSON.INFRA/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
-          "ERP.BACKEND.MODULE.PEOPLE.COMMON": "1.0.0",
-          "ERP.BACKEND.MODULE.PEOPLE.DOMAIN": "1.0.0",
+          "ERP.BACKEND.MODULE.PERSON.DOMAIN": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.1"
         },
         "compile": {
-          "bin/placeholder/ERP.BACKEND.MODULE.PEOPLE.INFRA.dll": {}
+          "bin/placeholder/ERP.BACKEND.MODULE.PERSON.INFRA.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ERP.BACKEND.MODULE.PEOPLE.INFRA.dll": {}
+          "bin/placeholder/ERP.BACKEND.MODULE.PERSON.INFRA.dll": {}
         }
       }
     }
@@ -3606,27 +3605,28 @@
         "version.txt"
       ]
     },
-    "ERP.BACKEND.MODULE.PEOPLE.COMMON/1.0.0": {
+    "ERP.BACKEND.MODULE.PERSON.COMMON/1.0.0": {
       "type": "project",
-      "path": "../ERP.BACKEND.MODULE.PEOPLE.COMMON/ERP.BACKEND.MODULE.PEOPLE.COMMON.csproj",
-      "msbuildProject": "../ERP.BACKEND.MODULE.PEOPLE.COMMON/ERP.BACKEND.MODULE.PEOPLE.COMMON.csproj"
+      "path": "../ERP.BACKEND.MODULE.PEOPLE.COMMON/ERP.BACKEND.MODULE.PERSON.COMMON.csproj",
+      "msbuildProject": "../ERP.BACKEND.MODULE.PEOPLE.COMMON/ERP.BACKEND.MODULE.PERSON.COMMON.csproj"
     },
-    "ERP.BACKEND.MODULE.PEOPLE.DOMAIN/1.0.0": {
+    "ERP.BACKEND.MODULE.PERSON.DOMAIN/1.0.0": {
       "type": "project",
-      "path": "../ERP.BACKEND.MODULE.PEOPLE.DOMAIN/ERP.BACKEND.MODULE.PEOPLE.DOMAIN.csproj",
-      "msbuildProject": "../ERP.BACKEND.MODULE.PEOPLE.DOMAIN/ERP.BACKEND.MODULE.PEOPLE.DOMAIN.csproj"
+      "path": "../ERP.BACKEND.MODULE.PEOPLE.DOMAIN/ERP.BACKEND.MODULE.PERSON.DOMAIN.csproj",
+      "msbuildProject": "../ERP.BACKEND.MODULE.PEOPLE.DOMAIN/ERP.BACKEND.MODULE.PERSON.DOMAIN.csproj"
     },
-    "ERP.BACKEND.MODULE.PEOPLE.INFRA/1.0.0": {
+    "ERP.BACKEND.MODULE.PERSON.INFRA/1.0.0": {
       "type": "project",
-      "path": "../ERP.BACKEND.MODULE.PEOPLE.INFRA/ERP.BACKEND.MODULE.PEOPLE.INFRA.csproj",
-      "msbuildProject": "../ERP.BACKEND.MODULE.PEOPLE.INFRA/ERP.BACKEND.MODULE.PEOPLE.INFRA.csproj"
+      "path": "../ERP.BACKEND.MODULE.PEOPLE.INFRA/ERP.BACKEND.MODULE.PERSON.INFRA.csproj",
+      "msbuildProject": "../ERP.BACKEND.MODULE.PEOPLE.INFRA/ERP.BACKEND.MODULE.PERSON.INFRA.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "AutoMapper >= 12.0.0",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.0",
-      "ERP.BACKEND.MODULE.PEOPLE.INFRA >= 1.0.0",
+      "ERP.BACKEND.MODULE.PERSON.DOMAIN >= 1.0.0",
+      "ERP.BACKEND.MODULE.PERSON.INFRA >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.1",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.1"
     ]
@@ -3638,9 +3638,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\ERP.BACKEND.MODULE.PEOPLE\\ERP.BACKEND.MODULE.PEOPLE.APPLICATION\\ERP.BACKEND.MODULE.PEOPLE.APPLICATION.csproj",
-      "projectName": "ERP.BACKEND.MODULE.PEOPLE.APPLICATION",
-      "projectPath": "C:\\Users\\Administrator\\source\\repos\\ERP.BACKEND.MODULE.PEOPLE\\ERP.BACKEND.MODULE.PEOPLE.APPLICATION\\ERP.BACKEND.MODULE.PEOPLE.APPLICATION.csproj",
+      "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\ERP.BACKEND.MODULE.PEOPLE\\ERP.BACKEND.MODULE.PEOPLE.APPLICATION\\ERP.BACKEND.MODULE.PERSON.APPLICATION.csproj",
+      "projectName": "ERP.BACKEND.MODULE.PERSON.APPLICATION",
+      "projectPath": "C:\\Users\\Administrator\\source\\repos\\ERP.BACKEND.MODULE.PEOPLE\\ERP.BACKEND.MODULE.PEOPLE.APPLICATION\\ERP.BACKEND.MODULE.PERSON.APPLICATION.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Administrator\\source\\repos\\ERP.BACKEND.MODULE.PEOPLE\\ERP.BACKEND.MODULE.PEOPLE.APPLICATION\\obj\\",
       "projectStyle": "PackageReference",
@@ -3663,8 +3663,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Administrator\\source\\repos\\ERP.BACKEND.MODULE.PEOPLE\\ERP.BACKEND.MODULE.PEOPLE.INFRA\\ERP.BACKEND.MODULE.PEOPLE.INFRA.csproj": {
-              "projectPath": "C:\\Users\\Administrator\\source\\repos\\ERP.BACKEND.MODULE.PEOPLE\\ERP.BACKEND.MODULE.PEOPLE.INFRA\\ERP.BACKEND.MODULE.PEOPLE.INFRA.csproj"
+            "C:\\Users\\Administrator\\source\\repos\\ERP.BACKEND.MODULE.PEOPLE\\ERP.BACKEND.MODULE.PEOPLE.DOMAIN\\ERP.BACKEND.MODULE.PERSON.DOMAIN.csproj": {
+              "projectPath": "C:\\Users\\Administrator\\source\\repos\\ERP.BACKEND.MODULE.PEOPLE\\ERP.BACKEND.MODULE.PEOPLE.DOMAIN\\ERP.BACKEND.MODULE.PERSON.DOMAIN.csproj"
+            },
+            "C:\\Users\\Administrator\\source\\repos\\ERP.BACKEND.MODULE.PEOPLE\\ERP.BACKEND.MODULE.PEOPLE.INFRA\\ERP.BACKEND.MODULE.PERSON.INFRA.csproj": {
+              "projectPath": "C:\\Users\\Administrator\\source\\repos\\ERP.BACKEND.MODULE.PEOPLE\\ERP.BACKEND.MODULE.PEOPLE.INFRA\\ERP.BACKEND.MODULE.PERSON.INFRA.csproj"
             }
           }
         }

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ERP.BACKEND.MODULE.PEOPLE.DOMAIN.Entities;
+using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace ERP.BACKEND.MODULE.PEOPLE.INFRA.Contexts
+namespace ERP.BACKEND.MODULE.PERSON.INFRA.Contexts
 {
     public class AppDbContext: DbContext
     {

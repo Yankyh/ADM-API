@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace ERP.BACKEND.MODULE.PEOPLE.Controllers
+namespace ERP.BACKEND.MODULE.PERSON.Controllers
 {
     [ApiController]
     [Route("[controller]")]

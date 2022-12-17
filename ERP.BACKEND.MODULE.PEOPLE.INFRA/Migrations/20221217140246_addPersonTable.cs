@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace ERP.BACKEND.MODULE.PEOPLE.INFRA.Migrations
+namespace ERP.BACKEND.MODULE.PERSON.INFRA.Migrations
 {
     /// <inheritdoc />
-    public partial class IncludePersonTable : Migration
+    public partial class addPersonTable : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

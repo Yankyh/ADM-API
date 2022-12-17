@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ERP.BACKEND.MODULE.PEOPLE.DOMAIN.Entities;
+using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
 
-namespace ERP.BACKEND.MODULE.PEOPLE.INFRA.Mapping
+namespace ERP.BACKEND.MODULE.PERSON.INFRA.Mapping
 {
     public class BaseMap<T> : IEntityTypeConfiguration<T> where T : EntityBase
     {

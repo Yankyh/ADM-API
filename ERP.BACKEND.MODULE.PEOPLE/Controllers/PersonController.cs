@@ -1,11 +1,11 @@
-﻿using ERP.BACKEND.MODULE.PEOPLE.APPLICATION.DTOs;
-using ERP.BACKEND.MODULE.PEOPLE.APPLICATION.Interfaces;
-using ERP.BACKEND.MODULE.PEOPLE.DOMAIN.Entities;
+﻿using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs;
+using ERP.BACKEND.MODULE.PERSON.APPLICATION.Interfaces;
+using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.IO;
 
-namespace ERP.BACKEND.MODULE.PEOPLE.Controllers
+namespace ERP.BACKEND.MODULE.PERSON.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

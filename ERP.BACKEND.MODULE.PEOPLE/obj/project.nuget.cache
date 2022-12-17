@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "y6Qa0kbB7MZ0H5rv1tv9snPjFNUz61DSDDAyu3mf1UYrD6aQbwCfjm27NtU7+a02IUfr6qpdU8HOQjpGupGqFA==",
+  "dgSpecHash": "VXY3xfCI7FnYUFoWaPqVW7PUjbYKmdbzw2PPyO1kPq9gHzxKV/IS+rvBBbmpaaJ0r7+2daiMSQs6iuP3QctA7g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Administrator\\source\\repos\\ERP.BACKEND.MODULE.PEOPLE\\ERP.BACKEND.MODULE.PEOPLE\\ERP.BACKEND.MODULE.PEOPLE.csproj",
+  "projectFilePath": "C:\\Users\\Administrator\\source\\repos\\ERP.BACKEND.MODULE.PEOPLE\\ERP.BACKEND.MODULE.PEOPLE\\ERP.BACKEND.MODULE.PERSON.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
