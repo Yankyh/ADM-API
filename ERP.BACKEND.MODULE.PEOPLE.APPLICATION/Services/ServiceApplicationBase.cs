@@ -12,20 +12,20 @@ using System.Threading.Tasks;
 
 namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.Services
 {
-    public class ServiceApplicationBase<TEntidade, TEntidadeDTO> : IApplicationBase<TEntidade, TEntidadeDTO> where TEntidade : EntityBase where TEntidadeDTO : BaseDTO
+    public class ServiceApplicationBase<TEntity, TEntityDTO> : IApplicationBase<TEntity, TEntityDTO> where TEntity : EntityBase where TEntityDTO : BaseDTO
     {
-        protected readonly IServiceBase<TEntidade> service;
+        protected readonly IServiceBase<TEntity> service;
         protected readonly IMapper iMapper;
 
-        public ServiceApplicationBase(IMapper iMapper, IServiceBase<TEntidade> service) : base()
+        public ServiceApplicationBase(IMapper iMapper, IServiceBase<TEntity> service) : base()
         {
             this.iMapper = iMapper;
             this.service = service;
         }
 
-        public async Task<TEntidadeDTO> Update(TEntidadeDTO entidade)
+        public async Task<TEntityDTO> Update(TEntityDTO entity)
         {
-           return iMapper.Map<TEntidadeDTO>(await service.Update(iMapper.Map<TEntidade>(entidade)));
+           return iMapper.Map<TEntityDTO>(await service.Update(iMapper.Map<TEntity>(entity)));
         }
 
         public async Task<bool> Delete(Guid id)
@@ -33,19 +33,19 @@ namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.Services
             return await service.Delete(id);
         }
 
-        public async Task<Guid> Add(TEntidadeDTO entidade)
+        public async Task<Guid> Add(TEntityDTO entity)
         {
-            return await service.Add(iMapper.Map<TEntidade>(entidade));
+            return await service.Add(iMapper.Map<TEntity>(entity));
         }
 
-        public async Task<TEntidadeDTO> GetById(Guid id)
+        public async Task<TEntityDTO> GetById(Guid id)
         {
-            return iMapper.Map<TEntidadeDTO>(await service.GetById(id));
+            return iMapper.Map<TEntityDTO>(await service.GetById(id));
         }
 
-        public async Task<IEnumerable<TEntidadeDTO>> GetAll()
+        public async Task<IEnumerable<TEntityDTO>> GetAll()
         {
-            return iMapper.Map<IEnumerable<TEntidadeDTO>>(await service.SelectAll());
+            return iMapper.Map<IEnumerable<TEntityDTO>>(await service.SelectAll());
         }
     }
 }

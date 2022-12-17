@@ -7,12 +7,12 @@ using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
 
 namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Repositories
 {
-    public interface IRepositoryBase<TEntidade> where TEntidade : EntityBase
+    public interface IRepositoryBase<TEntity> where TEntity : EntityBase
     {
-        Task<Guid> Add(TEntidade entidade);
+        Task<Guid> Add(TEntity entity);
         Task<bool> Delete(Guid id);
-        Task<TEntidade> Update(TEntidade entidade);
-        Task<TEntidade> GetById(Guid id);
-        Task<IEnumerable<TEntidade>> GetAll();
+        Task<TEntity> Update(TEntity entity);
+        Task<TEntity> GetById(Guid id);
+        Task<IEnumerable<TEntity>> GetAll();
     }
 }

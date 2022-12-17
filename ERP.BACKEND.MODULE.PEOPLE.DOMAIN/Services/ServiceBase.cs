@@ -9,18 +9,18 @@ using System.Threading.Tasks;
 
 namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Services
 {
-    public class ServiceBase<TEntidade> : IServiceBase<TEntidade> where TEntidade : EntityBase
+    public class ServiceBase<TEntity> : IServiceBase<TEntity> where TEntity : EntityBase
     {
-        protected readonly IRepositoryBase<TEntidade> repository;
+        protected readonly IRepositoryBase<TEntity> repository;
 
-        public ServiceBase(IRepositoryBase<TEntidade> repositorio)
+        public ServiceBase(IRepositoryBase<TEntity> repositorio)
         {
             this.repository = repositorio;
         }
 
-        public async Task<TEntidade> Update(TEntidade entidade)
+        public async Task<TEntity> Update(TEntity entity)
         {
-            return await repository.Update(entidade);
+            return await repository.Update(entity);
         }
 
         public async Task<bool> Delete(Guid id)
@@ -28,17 +28,17 @@ namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Services
            return await repository.Delete(id);
         }
 
-        public async Task<Guid> Add(TEntidade entidade)
+        public async Task<Guid> Add(TEntity entity)
         {
-            return await repository.Add(entidade);
+            return await repository.Add(entity);
         }
 
-        public Task<TEntidade> GetById(Guid id)
+        public Task<TEntity> GetById(Guid id)
         {
             return repository.GetById(id);
         }
 
-        public Task<IEnumerable<TEntidade>> SelectAll()
+        public Task<IEnumerable<TEntity>> SelectAll()
         {
             return repository.GetAll();
         }

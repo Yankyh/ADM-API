@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ERP.BACKEND.MODULE.PERSON.INFRA.Repositories
 {
-    public class RepositoryBase<TEntidade> : IRepositoryBase<TEntidade> where TEntidade : EntityBase
+    public class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : EntityBase
     {
         protected readonly AppDbContext appDbContext;
 
@@ -20,15 +20,15 @@ namespace ERP.BACKEND.MODULE.PERSON.INFRA.Repositories
             this.appDbContext = appDbContext;
         }
 
-        public async Task<Guid> Add(TEntidade entidade)
+        public async Task<Guid> Add(TEntity entity)
         {
-            await appDbContext.AddAsync(entidade);
+            await appDbContext.AddAsync(entity);
 
             await appDbContext.SaveChangesAsync();
 
-            if(entidade.Id != Guid.Empty)
+            if(entity.Id != Guid.Empty)
             {
-                return entidade.Id;
+                return entity.Id;
             }
             else
             {
@@ -40,7 +40,7 @@ namespace ERP.BACKEND.MODULE.PERSON.INFRA.Repositories
         {
             try
             {
-                var entity = await appDbContext.Set<TEntidade>().FirstOrDefaultAsync(x => x.Id == id);
+                var entity = await appDbContext.Set<TEntity>().FirstOrDefaultAsync(x => x.Id == id);
 
                 if (entity == null)
                 {
@@ -58,27 +58,27 @@ namespace ERP.BACKEND.MODULE.PERSON.INFRA.Repositories
             }
         }
 
-        public async Task<IEnumerable<TEntidade>> GetAll()
+        public async Task<IEnumerable<TEntity>> GetAll()
         {
-            return await appDbContext.Set<TEntidade>().ToListAsync();
+            return await appDbContext.Set<TEntity>().ToListAsync();
         }
 
-        public async Task<TEntidade> GetById(Guid id)
+        public async Task<TEntity> GetById(Guid id)
         {
-            var entity = await appDbContext.Set<TEntidade>().FirstOrDefaultAsync(x => x.Id == id);
+            var entity = await appDbContext.Set<TEntity>().FirstOrDefaultAsync(x => x.Id == id);
 
 #pragma warning disable CS8603 // Possible null reference return.
             return entity;
 #pragma warning restore CS8603 // Possible null reference return.
         }
 
-        public async Task<TEntidade> Update(TEntidade entidade)
+        public async Task<TEntity> Update(TEntity entity)
         {
-            appDbContext.Update(entidade);
+            appDbContext.Update(entity);
 
             await appDbContext.SaveChangesAsync();
 
-            return entidade;
+            return entity;
         }
     }
 }

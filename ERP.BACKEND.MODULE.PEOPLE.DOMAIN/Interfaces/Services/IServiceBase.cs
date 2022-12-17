@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Services
 {
-    public interface IServiceBase<TEntidade> where TEntidade : EntityBase
+    public interface IServiceBase<TEntity> where TEntity : EntityBase
     {
-        Task<Guid> Add(TEntidade entidade);
+        Task<Guid> Add(TEntity entity);
         Task<bool> Delete(Guid id);
-        Task<TEntidade> Update(TEntidade entidade);
-        Task<TEntidade> GetById(Guid id);
-        Task<IEnumerable<TEntidade>> SelectAll();
+        Task<TEntity> Update(TEntity entity);
+        Task<TEntity> GetById(Guid id);
+        Task<IEnumerable<TEntity>> SelectAll();
     }
 }
