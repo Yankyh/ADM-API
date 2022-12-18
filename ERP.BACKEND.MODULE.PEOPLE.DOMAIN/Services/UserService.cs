@@ -1,5 +1,6 @@
 ﻿using ERP.BACKEND.MODULE.PERSON.COMMON.Tools;
 using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
+using ERP.BACKEND.MODULE.PERSON.DOMAIN.Extensions.Validators;
 using ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Repositories;
 using ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Services;
 using System;
@@ -20,6 +21,8 @@ namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Services
 
         public override async Task<User> Add(User entity)
         {
+            entity.Validate();
+
             entity.Password = SecurePasswordHasher.Hash(entity.Password);
             return await repository.Add(entity);
         }
