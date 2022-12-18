@@ -9,7 +9,7 @@ namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Repositories
 {
     public interface IRepositoryBase<TEntity> where TEntity : EntityBase
     {
-        Task<Guid> Add(TEntity entity);
+        Task<TEntity> Add(TEntity entity);
         Task<bool> Delete(Guid id);
         Task<TEntity> Update(TEntity entity);
         Task<TEntity> GetById(Guid id);

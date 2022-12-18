@@ -1,4 +1,5 @@
 ﻿using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs;
+using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Response;
 using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
 using System;
 using System.Collections.Generic;
@@ -12,10 +13,10 @@ namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.Interfaces
         where TEntity : EntityBase
         where TEntityDTO : BaseDTO
     {
-        Task<Guid> Add(TEntityDTO entity);
-        Task<bool> Delete(Guid id);
-        Task<TEntityDTO> Update(TEntityDTO entity);
-        Task<TEntityDTO> GetById(Guid id);
-        Task<IEnumerable<TEntityDTO>> GetAll();
+        Task<ResponseBase<TEntityDTO>> Add(TEntityDTO entity);
+        Task<ResponseBase> Delete(Guid id);
+        Task<ResponseBase<TEntityDTO>> Update(TEntityDTO entity);
+        Task<ResponseBase<TEntityDTO>> GetById(Guid id);
+        Task<ResponseBase<IEnumerable<TEntityDTO>>> GetAll();
     }
 }

@@ -28,7 +28,7 @@ namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Services
            return await repository.Delete(id);
         }
 
-        public virtual async Task<Guid> Add(TEntity entity)
+        public virtual async Task<TEntity> Add(TEntity entity)
         {
             return await repository.Add(entity);
         }

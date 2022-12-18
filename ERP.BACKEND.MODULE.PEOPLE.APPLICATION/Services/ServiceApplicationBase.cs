@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs;
+using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Response;
 using ERP.BACKEND.MODULE.PERSON.APPLICATION.Interfaces;
 using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
 using ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Services;
@@ -23,29 +24,29 @@ namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.Services
             this.service = service;
         }
 
-        public async Task<TEntityDTO> Update(TEntityDTO entity)
+        public async Task<ResponseBase<TEntityDTO>> Update(TEntityDTO entity)
         {
-           return iMapper.Map<TEntityDTO>(await service.Update(iMapper.Map<TEntity>(entity)));
+            return iMapper.Map<ResponseBase<TEntityDTO>>(await service.Update(iMapper.Map<TEntity>(entity)));
         }
 
-        public async Task<bool> Delete(Guid id)
+        public async Task<ResponseBase> Delete(Guid id)
         {
-            return await service.Delete(id);
+            return new ResponseBase { Sucess = await service.Delete(id) };
         }
 
-        public async Task<Guid> Add(TEntityDTO entity)
+        public async Task<ResponseBase<TEntityDTO>> Add(TEntityDTO entity)
         {
-            return await service.Add(iMapper.Map<TEntity>(entity));
+            return iMapper.Map<ResponseBase<TEntityDTO>>(await service.Add(iMapper.Map<TEntity>(entity)));
         }
 
-        public async Task<TEntityDTO> GetById(Guid id)
+        public async Task<ResponseBase<TEntityDTO>> GetById(Guid id)
         {
-            return iMapper.Map<TEntityDTO>(await service.GetById(id));
+            return iMapper.Map<ResponseBase<TEntityDTO>>(await service.GetById(id));
         }
 
-        public async Task<IEnumerable<TEntityDTO>> GetAll()
+        public async Task<ResponseBase<IEnumerable<TEntityDTO>>> GetAll()
         {
-            return iMapper.Map<IEnumerable<TEntityDTO>>(await service.SelectAll());
+            return iMapper.Map<ResponseBase<IEnumerable<TEntityDTO>>>(await service.SelectAll());
         }
     }
 }
