@@ -18,7 +18,7 @@ namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Services
             this._repository = repository;
         }
 
-        public override async Task<Guid> Add(User entity)
+        public override async Task<User> Add(User entity)
         {
             entity.Password = SecurePasswordHasher.Hash(entity.Password);
             return await repository.Add(entity);

@@ -20,7 +20,7 @@ namespace ERP.BACKEND.MODULE.PERSON.INFRA.Repositories
             this.appDbContext = appDbContext;
         }
 
-        public async Task<Guid> Add(TEntity entity)
+        public async Task<TEntity> Add(TEntity entity)
         {
             await appDbContext.AddAsync(entity);
 
@@ -28,11 +28,11 @@ namespace ERP.BACKEND.MODULE.PERSON.INFRA.Repositories
 
             if(entity.Id != Guid.Empty)
             {
-                return entity.Id;
+                return entity;
             }
             else
             {
-                return Guid.Empty;
+                return null;
             }      
         }
 

@@ -21,9 +21,9 @@ namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.Services
             this._service = service;
         }
 
-        public async Task<UserAuthenticateResponse> Authenticate(UserAuthenticateRequest entity)
+        public async Task<ResponseBase<UserAuthenticateResponse>> Authenticate(UserAuthenticateRequest entity)
         {
-            return iMapper.Map<UserAuthenticateResponse>(await _service.Authenticate(iMapper.Map<User>(entity)));
+            return iMapper.Map<ResponseBase<UserAuthenticateResponse>>(await _service.Authenticate(iMapper.Map<User>(entity)));
         }
     }
 }

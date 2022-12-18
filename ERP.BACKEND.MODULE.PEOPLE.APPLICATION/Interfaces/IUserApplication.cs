@@ -12,6 +12,6 @@ namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.Interfaces
 {
     public interface IUserApplication : IApplicationBase<User, UserDTO>
     {
-        Task<UserAuthenticateResponse> Authenticate(UserAuthenticateRequest entity);
+        Task<ResponseBase<UserAuthenticateResponse>> Authenticate(UserAuthenticateRequest entity);
     }
 }
