@@ -38,9 +38,9 @@ namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Services
             return repository.GetById(id);
         }
 
-        public virtual Task<IEnumerable<TEntity>> SelectAll()
+      /*  public virtual Task<IEnumerable<TEntity>> SelectAll()
         {
             return repository.GetAll();
-        }
+        }*/
     }
 }

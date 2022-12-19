@@ -1,5 +1,5 @@
 ﻿using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs;
-using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Requests;
+using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Requests.User;
 using ERP.BACKEND.MODULE.PERSON.APPLICATION.Interfaces;
 using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
 using Microsoft.AspNetCore.Mvc;
@@ -15,6 +15,21 @@ namespace ERP.BACKEND.MODULE.PERSON.Controllers
         public UserController(IUserApplication app) : base(app)
         {
             this._app = app;
+        }
+
+        [HttpPost]
+        [Route("GetAll")]
+        public async Task<IActionResult> GetAll([FromQuery] UserGetAllRequest request)
+        {
+            try
+            {
+                var entity = await _app.GetAll(request);
+                return new OkObjectResult(entity);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpPost]

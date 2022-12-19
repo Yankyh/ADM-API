@@ -23,7 +23,7 @@ namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.DependencyInjection
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(conection));
 
             //Aplicação
-            services.AddScoped(typeof(IApplicationBase<,>), typeof(ServiceApplicationBase<,>));
+            services.AddScoped(typeof(IApplicationBase<,,>), typeof(ServiceApplicationBase<,,>));
             services.AddScoped<IPersonApplication, PersonApplication>();
             services.AddScoped<IUserApplication, UserApplication>();
 

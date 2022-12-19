@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Requests
+namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Requests.User
 {
     public class UserAuthenticateRequest
     {

@@ -9,7 +9,7 @@
         {
             if (new EmailAddressAttribute().IsValid(user.Email))
             {
-                throw new InvalidDataException($"O e-mail {user.Email} informado para o usuário {user.Name} é inválido.");
+               // throw new InvalidDataException($"O e-mail {user.Email} informado para o usuário {user.Name} é inválido.");
             }
         }
     }

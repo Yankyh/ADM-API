@@ -32,5 +32,10 @@ namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Services
             return await _repository.GetByName(entity.Name);
         }
 
+        public virtual Task<IEnumerable<User>> GetAll()
+        {
+            return repository.GetAll();
+        }
+
     }
 }

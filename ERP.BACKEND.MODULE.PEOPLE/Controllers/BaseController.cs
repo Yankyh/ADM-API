@@ -1,4 +1,6 @@
 ﻿using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs;
+using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Requests;
+using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Requests.User;
 using ERP.BACKEND.MODULE.PERSON.APPLICATION.Interfaces;
 using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
 using Microsoft.AspNetCore.Mvc;
@@ -12,9 +14,9 @@ namespace ERP.BACKEND.MODULE.PERSON.Controllers
          where Entity : EntityBase
          where EntityDTO : BaseDTO
     {
-        readonly protected IApplicationBase<Entity, EntityDTO> _application;
+        readonly protected IApplicationBase<Entity, EntityDTO, DefaultFilterRequest> _application;
 
-        public BaseController(IApplicationBase<Entity, EntityDTO> application)
+        public BaseController(IApplicationBase<Entity, EntityDTO, DefaultFilterRequest> application)
         {
             this._application = application;
         }
@@ -35,20 +37,20 @@ namespace ERP.BACKEND.MODULE.PERSON.Controllers
             }
         }
 
-        [HttpGet]
+        /*[HttpGet]
         [Route("")]
-        public async Task<IActionResult> GetAll()
+        public virtual async Task<IActionResult> GetAll(UserGetAllRequest request)
         {
             try
             {
-                var entity = await _application.GetAll();
+                var entity = await _application.GetAll(request);
                 return new OkObjectResult(entity);
             }
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
-        }
+        }*/
 
         [HttpPost]
         public async Task<IActionResult> Add([FromBody] EntityDTO data)
