@@ -13,6 +13,6 @@ namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Services
         Task<bool> Delete(Guid id);
         Task<TEntity> Update(TEntity entity);
         Task<TEntity> GetById(Guid id);
-        Task<IEnumerable<TEntity>> SelectAll();
+       // Task<IEnumerable<TEntity>> SelectAll();
     }
 }

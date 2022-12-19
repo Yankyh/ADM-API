@@ -1,4 +1,5 @@
 ﻿using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs;
+using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Requests;
 using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.Interfaces
 {
-    public interface IPersonApplication : IApplicationBase<Person, PersonDTO>
+    public interface IPersonApplication : IApplicationBase<Person, PersonDTO, DefaultFilterRequest>
     {
     }
 }
