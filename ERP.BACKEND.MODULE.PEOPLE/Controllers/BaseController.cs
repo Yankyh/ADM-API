@@ -1,13 +1,11 @@
-﻿using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs;
-using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Requests;
-using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Requests.User;
-using ERP.BACKEND.MODULE.PERSON.APPLICATION.Interfaces;
-using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
-using Microsoft.AspNetCore.Mvc;
-using static System.Net.Mime.MediaTypeNames;
-
-namespace ERP.BACKEND.MODULE.PERSON.Controllers
+﻿namespace ERP.BACKEND.MODULE.PERSON.Controllers
 {
+    using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs;
+    using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Requests;
+    using ERP.BACKEND.MODULE.PERSON.APPLICATION.Interfaces;
+    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
+    using Microsoft.AspNetCore.Mvc;
+
     [Produces("application/json")]
     [Route("api/[controller]")]
     public class BaseController<Entity, EntityDTO> : Controller
@@ -36,21 +34,6 @@ namespace ERP.BACKEND.MODULE.PERSON.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
-        /*[HttpGet]
-        [Route("")]
-        public virtual async Task<IActionResult> GetAll(UserGetAllRequest request)
-        {
-            try
-            {
-                var entity = await _application.GetAll(request);
-                return new OkObjectResult(entity);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }*/
 
         [HttpPost]
         public async Task<IActionResult> Add([FromBody] EntityDTO data)

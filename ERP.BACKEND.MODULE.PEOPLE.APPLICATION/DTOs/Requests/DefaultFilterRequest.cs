@@ -1,12 +1,7 @@
-﻿using ERP.BACKEND.MODULE.PERSON.COMMON.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Requests
+﻿namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Requests
 {
+    using ERP.BACKEND.MODULE.PERSON.COMMON.Enums;
+
     public class DefaultFilterRequest
     {
         public string OrderBy { get; set; } = "";

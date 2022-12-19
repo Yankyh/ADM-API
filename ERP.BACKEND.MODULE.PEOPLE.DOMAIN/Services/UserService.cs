@@ -1,16 +1,11 @@
-﻿using ERP.BACKEND.MODULE.PERSON.COMMON.Tools;
-using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
-using ERP.BACKEND.MODULE.PERSON.DOMAIN.Extensions.Validators;
-using ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Repositories;
-using ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Services
+﻿namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Services
 {
+    using ERP.BACKEND.MODULE.PERSON.COMMON.Tools;
+    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
+    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Extensions.Validators;
+    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Repositories;
+    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Services;
+
     public class UserService : ServiceBase<User>, IUserService
     {
         IUserRepository _repository;
@@ -27,15 +22,9 @@ namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Services
             return await repository.Add(entity);
         }
 
-        public async Task<User> Authenticate(User entity)
-        {
-            return await _repository.GetByName(entity.Name);
-        }
+        public async Task<User> Authenticate(User entity) => await _repository.GetByName(entity.Name) ?? throw new Exception($"The user {entity.Name} is invalid!");
 
-        public virtual Task<IEnumerable<User>> GetAll()
-        {
-            return repository.GetAll();
-        }
+        public virtual Task<IEnumerable<User>> GetAll() => repository.GetAll();
 
     }
 }

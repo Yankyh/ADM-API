@@ -1,20 +1,19 @@
-﻿using ERP.BACKEND.MODULE.PERSON.COMMON.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities
+﻿namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities
 {
+    using ERP.BACKEND.MODULE.PERSON.COMMON.Enums;
+    using System.ComponentModel.DataAnnotations;
+
     public class Person : EntityBase
     {
-        public string Name { get; set; }
+        [Required]
+        public string Name { get; set; } = string.Empty;
         public string? CorporateName { get; set; }
         public DateTime? BirthDate { get; set; }
         public SexEnum? Sex { get; set; }
-        public string CpfCnpj { get; set; }
-        public TypeEnum Type { get; set; }
+        [Required]
+        public string CpfCnpj { get; set; } = string.Empty;
+        [Required]
+        public PersonType Type { get; set; }
         public string? StateRegistration { get; set; }
     }
 }

@@ -1,15 +1,13 @@
-﻿using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
-using ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Repositories;
-using ERP.BACKEND.MODULE.PERSON.INFRA.Contexts;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ERP.BACKEND.MODULE.PERSON.INFRA.Repositories
+﻿namespace ERP.BACKEND.MODULE.PERSON.INFRA.Repositories
 {
+    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
+    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Repositories;
+    using ERP.BACKEND.MODULE.PERSON.INFRA.Contexts;
+    using Microsoft.EntityFrameworkCore;
+    using System;
+    using System.Collections.Generic;
+    using System.Threading.Tasks;
+
     public class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : EntityBase
     {
         protected readonly AppDbContext appDbContext;
@@ -32,7 +30,7 @@ namespace ERP.BACKEND.MODULE.PERSON.INFRA.Repositories
             }
             else
             {
-                return null;
+                throw new InvalidOperationException("Something went wrong when adding!");
             }      
         }
 
@@ -52,23 +50,15 @@ namespace ERP.BACKEND.MODULE.PERSON.INFRA.Repositories
 
                 return await appDbContext.SaveChangesAsync() > 0;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return false;
             }
         }
 
-        public async Task<IEnumerable<TEntity>> GetAll()
-        {
-            return await appDbContext.Set<TEntity>().ToListAsync();
-        }
+        public async Task<IEnumerable<TEntity>> GetAll() => await appDbContext.Set<TEntity>().ToListAsync();
 
-        public async Task<TEntity> GetById(Guid id)
-        {
-            var entity = await appDbContext.Set<TEntity>().FirstOrDefaultAsync(x => x.Id == id);
-
-            return entity;
-        }
+        public async Task<TEntity?> GetById(Guid id) => await appDbContext.Set<TEntity>().FirstOrDefaultAsync(x => x.Id == id);
 
         public async Task<TEntity> Update(TEntity entity)
         {

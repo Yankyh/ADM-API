@@ -1,15 +1,9 @@
-﻿using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ERP.BACKEND.MODULE.PERSON.INFRA.Mapping
+﻿namespace ERP.BACKEND.MODULE.PERSON.INFRA.Mapping
 {
+    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
+    using Microsoft.EntityFrameworkCore;
+    using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
     public class PersonMap : BaseMap<Person>
     {
         public override void Configure(EntityTypeBuilder<Person> builder)

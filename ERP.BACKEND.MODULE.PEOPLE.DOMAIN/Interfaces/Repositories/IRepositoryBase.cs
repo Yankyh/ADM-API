@@ -1,18 +1,13 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Collections.Generic;
-using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
-
-namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Repositories
+﻿namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Repositories
 {
+    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
+
     public interface IRepositoryBase<TEntity> where TEntity : EntityBase
     {
         Task<TEntity> Add(TEntity entity);
         Task<bool> Delete(Guid id);
         Task<TEntity> Update(TEntity entity);
-        Task<TEntity> GetById(Guid id);
+        Task<TEntity?> GetById(Guid id);
         Task<IEnumerable<TEntity>> GetAll();
     }
 }

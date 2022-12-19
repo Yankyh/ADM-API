@@ -1,23 +1,14 @@
-﻿using AutoMapper;
-using Azure.Core;
-using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs;
-using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Requests;
-using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Response;
-using ERP.BACKEND.MODULE.PERSON.APPLICATION.Interfaces;
-using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
-using ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Services;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Linq.Expressions;
-using ERP.BACKEND.MODULE.PERSON.COMMON.Enums;
-
-namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.Services
+﻿namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.Services
 {
+    using AutoMapper;
+    using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs;
+    using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Requests;
+    using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Response;
+    using ERP.BACKEND.MODULE.PERSON.APPLICATION.Interfaces;
+    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
+    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Services;
+    using ERP.BACKEND.MODULE.PERSON.COMMON.Enums;
+
     public class ServiceApplicationBase<TEntity, TEntityDTO, TRequest> : IApplicationBase<TEntity, TEntityDTO, TRequest> where TEntity : EntityBase where TEntityDTO : BaseDTO where TRequest : DefaultFilterRequest
     {
         protected readonly IServiceBase<TEntity> service;
@@ -49,12 +40,7 @@ namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.Services
             return iMapper.Map<ResponseBase<TEntityDTO>>(await service.GetById(id));
         }
 
-        /* public async Task<ResponseBase<IEnumerable<TEntityDTO>>> GetAll()
-         {
-             return iMapper.Map<ResponseBase<IEnumerable<TEntityDTO>>>(await service.SelectAll());
-         }*/
-
-        public async Task<IEnumerable<TEntity>> Filter(TRequest request, IEnumerable<TEntity> entities)
+        public IEnumerable<TEntity> Filter(TRequest request, IEnumerable<TEntity> entities)
         {
             entities = OrderBy(request, entities);
             entities = Distinct(request, entities);
@@ -65,7 +51,7 @@ namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.Services
 
         private IEnumerable<TEntity> OrderBy(TRequest request, IEnumerable<TEntity> entities)
         {
-            System.Reflection.PropertyInfo property = typeof(TEntity).GetProperty(request.OrderBy);
+            System.Reflection.PropertyInfo property = typeof(TEntity).GetProperty(request.OrderBy) ?? throw new InvalidDataException("Something wen wrong when ordering!");
 
             if(request.OrderDirection == OrderDirection.ASC)
             {
@@ -95,7 +81,6 @@ namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.Services
         {
             return entities.Skip(request.MinIndex).Take(request.MaxIndex);
         }
-
 
     }
 }

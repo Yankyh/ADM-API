@@ -1,10 +1,7 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
-
-#nullable disable
-
-namespace ERP.BACKEND.MODULE.PERSON.INFRA.Migrations
+﻿namespace ERP.BACKEND.MODULE.PERSON.INFRA.Migrations
 {
+    using Microsoft.EntityFrameworkCore.Migrations;
+
     /// <inheritdoc />
     public partial class addUserTable : Migration
     {
