@@ -1,14 +1,9 @@
-﻿using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
-using ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Repositories;
-using ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Services
+﻿namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Services
 {
+    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
+    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Repositories;
+    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Services;
+
     public class ServiceBase<TEntity> : IServiceBase<TEntity> where TEntity : EntityBase
     {
         protected readonly IRepositoryBase<TEntity> repository;
@@ -33,14 +28,6 @@ namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Services
             return await repository.Add(entity);
         }
 
-        public virtual Task<TEntity> GetById(Guid id)
-        {
-            return repository.GetById(id);
-        }
-
-      /*  public virtual Task<IEnumerable<TEntity>> SelectAll()
-        {
-            return repository.GetAll();
-        }*/
+        public virtual Task<TEntity?> GetById(Guid id) => repository.GetById(id);
     }
 }

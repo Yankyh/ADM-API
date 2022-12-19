@@ -24,7 +24,7 @@ namespace ERP.BACKEND.MODULE.PERSON
         {
             services.AddControllersWithViews();
             services.AddAutoMapper(x => x.AddProfile(new EntityMapping()));
-            Initializer.Configure(services, Configuration.GetConnectionString("DefaultConnection"));
+            Initializer.Configure(services, Configuration.GetConnectionString("DefaultConnection") ?? throw new Exception("Something went wrong when connecting to the db!"));
         }
 
         public void Configure(WebApplication app, IWebHostEnvironment env)

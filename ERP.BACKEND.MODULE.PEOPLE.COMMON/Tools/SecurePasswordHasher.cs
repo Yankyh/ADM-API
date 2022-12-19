@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ERP.BACKEND.MODULE.PERSON.COMMON.Tools
+﻿namespace ERP.BACKEND.MODULE.PERSON.COMMON.Tools
 {
+    using System.Security.Cryptography;
+    using System.Text;
+
     public class SecurePasswordHasher
     {
         public static string Hash(string password)
@@ -22,9 +17,6 @@ namespace ERP.BACKEND.MODULE.PERSON.COMMON.Tools
             return Convert.ToHexString(hash);
         }
 
-        public static bool CompareHash(string password, string hashedPassword)
-        {
-            return (Hash(password).Equals(hashedPassword));
-        }
+        public static bool CompareHash(string password, string hashedPassword) => (Hash(password).Equals(hashedPassword));
     }
 }

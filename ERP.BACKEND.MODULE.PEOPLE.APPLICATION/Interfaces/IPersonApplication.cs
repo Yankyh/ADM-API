@@ -1,15 +1,9 @@
-﻿using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs;
-using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Requests;
-using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.Interfaces
+﻿namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.Interfaces
 {
+    using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs;
+    using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Requests;
+    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
+
     public interface IPersonApplication : IApplicationBase<Person, PersonDTO, DefaultFilterRequest>
     {
     }

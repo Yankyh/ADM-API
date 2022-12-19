@@ -1,17 +1,11 @@
-﻿using AutoMapper;
-using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs;
-using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Requests.User;
-using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Response;
-using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.Mapping
+﻿namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.Mapping
 {
+    using AutoMapper;
+    using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs;
+    using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Requests.User;
+    using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Response;
+    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
+
     public class EntityMapping : Profile
     {
         public EntityMapping()
@@ -28,7 +22,6 @@ namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.Mapping
             CreateMap<User, ResponseBase<UserDTO>>().ForMember(x => x.Response, map => map.MapFrom(y => y));
             CreateMap<User, ResponseBase>();
             CreateMap<ResponseBase<UserDTO>, UserDTO>();
-          //  CreateMap<UserDTO, ResponseBase>();
 
             CreateMap<IEnumerable<User>, ResponseBase<IEnumerable<UserDTO>>>().ForMember(x => x.Response, map => map.MapFrom(y => y));
             CreateMap<UserDTO, ResponseBase>();

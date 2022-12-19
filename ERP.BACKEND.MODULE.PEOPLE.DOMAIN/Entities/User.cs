@@ -1,15 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities
+﻿namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities
 {
+    using System.ComponentModel.DataAnnotations;
+
     public class User : EntityBase
     {
-        public string Name { get; set; }
-        public string Password { get; set; }
-        public string Email { get; set; }
+        [Required]
+        public string Name { get; set; } = string.Empty;
+
+        [Required]
+        public string Password { get; set; } = string.Empty;
+
+        [Required]
+        public string Email { get; set; } = string.Empty;
     }
 }

@@ -12,14 +12,8 @@ namespace ERP.BACKEND.MODULE.PERSON.INFRA.Repositories
 {
     public class UserRepository : RepositoryBase<User>, IUserRepository
     {
-        public UserRepository(AppDbContext appDbContext) : base(appDbContext)
-        {
-    
-        }
+        public UserRepository(AppDbContext appDbContext) : base(appDbContext) { }
 
-        public async Task<User> GetByName(string user)
-        {
-            return await appDbContext.Set<User>().FirstOrDefaultAsync(x => x.Name.Equals(user));
-        }
+        public async Task<User?> GetByName(string user) => await appDbContext.Set<User>().FirstOrDefaultAsync(x => x.Name.Equals(user));
     }
 }

@@ -1,12 +1,7 @@
-﻿using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Services
+﻿namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Services
 {
+    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
+
     public interface IUserService
     {
         Task<User> Authenticate(User entity);

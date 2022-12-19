@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ERP.BACKEND.MODULE.PERSON.COMMON.Enums
+﻿namespace ERP.BACKEND.MODULE.PERSON.COMMON.Enums
 {
-    public enum TypeEnum
+    public enum PersonType
     {
         Customer,
         Collaborator,

@@ -1,20 +1,14 @@
-﻿using AutoMapper;
-using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs;
-using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Requests;
-using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Requests.User;
-using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Response;
-using ERP.BACKEND.MODULE.PERSON.APPLICATION.Interfaces;
-using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
-using ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Services;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.Services
+﻿namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.Services
 {
+    using AutoMapper;
+    using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs;
+    using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Requests;
+    using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Requests.User;
+    using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Response;
+    using ERP.BACKEND.MODULE.PERSON.APPLICATION.Interfaces;
+    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
+    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Services;
+
     public class UserApplication : ServiceApplicationBase<User, UserDTO, DefaultFilterRequest>, IUserApplication
     {
         IUserService _service;
@@ -32,7 +26,7 @@ namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.Services
         {
             var entities = await _service.GetAll();
 
-            entities = await Filter(request, entities);
+            entities = Filter(request, entities);
 
             return iMapper.Map<ResponseBase<IEnumerable<UserDTO>>>(entities);
         }
