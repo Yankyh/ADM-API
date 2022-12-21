@@ -1,6 +1,6 @@
-﻿namespace Erp.Backend.Module.PERSON.DOMAIN.Interfaces.Services
+﻿namespace Backend.Module.PERSON.DOMAIN.Interfaces.Services
 {
-    using Erp.Backend.Module.PERSON.DOMAIN.Entities;
+    using Backend.Module.PERSON.DOMAIN.Entities;
 
     public interface IUserService
     {

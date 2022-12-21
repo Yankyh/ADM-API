@@ -1,9 +1,9 @@
-﻿namespace Erp.Backend.Module.PERSON.APPLICATION.Interfaces
+﻿namespace Backend.Module.PERSON.APPLICATION.Interfaces
 {
-    using Erp.Backend.Module.PERSON.APPLICATION.DTOs;
-    using Erp.Backend.Module.PERSON.APPLICATION.DTOs.Requests;
-    using Erp.Backend.Module.PERSON.APPLICATION.DTOs.Response;
-    using Erp.Backend.Module.PERSON.DOMAIN.Entities;
+    using Backend.Module.PERSON.APPLICATION.DTOs;
+    using Backend.Module.PERSON.APPLICATION.DTOs.Requests;
+    using Backend.Module.PERSON.APPLICATION.DTOs.Response;
+    using Backend.Module.PERSON.DOMAIN.Entities;
 
     public interface IApplicationBase<TEntity, TEntityDTO, TRequest>
         where TEntity : EntityBase

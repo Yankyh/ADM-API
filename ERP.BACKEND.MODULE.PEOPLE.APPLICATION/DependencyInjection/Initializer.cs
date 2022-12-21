@@ -1,12 +1,12 @@
-﻿namespace Erp.Backend.Module.PERSON.APPLICATION.DependencyInjection
+﻿namespace Backend.Module.PERSON.APPLICATION.DependencyInjection
 {
-    using Erp.Backend.Module.PERSON.APPLICATION.Interfaces;
-    using Erp.Backend.Module.PERSON.APPLICATION.Services;
-    using Erp.Backend.Module.PERSON.DOMAIN.Interfaces.Repositories;
-    using Erp.Backend.Module.PERSON.DOMAIN.Interfaces.Services;
-    using Erp.Backend.Module.PERSON.DOMAIN.Services;
-    using Erp.Backend.Module.PERSON.INFRA.Contexts;
-    using Erp.Backend.Module.PERSON.INFRA.Repositories;
+    using Backend.Module.PERSON.APPLICATION.Interfaces;
+    using Backend.Module.PERSON.APPLICATION.Services;
+    using Backend.Module.PERSON.DOMAIN.Interfaces.Repositories;
+    using Backend.Module.PERSON.DOMAIN.Interfaces.Services;
+    using Backend.Module.PERSON.DOMAIN.Services;
+    using Backend.Module.PERSON.INFRA.Contexts;
+    using Backend.Module.PERSON.INFRA.Repositories;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.DependencyInjection;
 

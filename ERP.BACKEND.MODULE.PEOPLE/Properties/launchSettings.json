@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "Erp.Backend.Module.PERSON": {
+    "Backend.Module.PERSON": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

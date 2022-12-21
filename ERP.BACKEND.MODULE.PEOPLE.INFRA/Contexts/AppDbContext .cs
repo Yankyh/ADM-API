@@ -1,6 +1,6 @@
-﻿namespace Erp.Backend.Module.PERSON.INFRA.Contexts
+﻿namespace Backend.Module.PERSON.INFRA.Contexts
 {
-    using Erp.Backend.Module.PERSON.DOMAIN.Entities;
+    using Backend.Module.PERSON.DOMAIN.Entities;
     using Microsoft.EntityFrameworkCore;
 
     public class AppDbContext: DbContext

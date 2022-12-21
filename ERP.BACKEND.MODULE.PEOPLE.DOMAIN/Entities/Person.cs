@@ -1,6 +1,6 @@
-﻿namespace Erp.Backend.Module.PERSON.DOMAIN.Entities
+﻿namespace Backend.Module.PERSON.DOMAIN.Entities
 {
-    using Erp.Backend.Module.PERSON.COMMON.Enums;
+    using Backend.Module.PERSON.COMMON.Enums;
     using System.ComponentModel.DataAnnotations;
 
     public class Person : EntityBase

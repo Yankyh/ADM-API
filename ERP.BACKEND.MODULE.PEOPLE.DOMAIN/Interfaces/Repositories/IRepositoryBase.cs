@@ -1,6 +1,6 @@
-﻿namespace Erp.Backend.Module.PERSON.DOMAIN.Interfaces.Repositories
+﻿namespace Backend.Module.PERSON.DOMAIN.Interfaces.Repositories
 {
-    using Erp.Backend.Module.PERSON.DOMAIN.Entities;
+    using Backend.Module.PERSON.DOMAIN.Entities;
 
     public interface IRepositoryBase<TEntity> where TEntity : EntityBase
     {

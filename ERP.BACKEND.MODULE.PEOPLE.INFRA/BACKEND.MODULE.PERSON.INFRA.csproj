@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Erp.Backend.Module.PEOPLE.DOMAIN\Erp.Backend.Module.PERSON.DOMAIN.csproj" />
+    <ProjectReference Include="..\ERP.BACKEND.MODULE.PEOPLE.DOMAIN\Backend.Module.Person.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>

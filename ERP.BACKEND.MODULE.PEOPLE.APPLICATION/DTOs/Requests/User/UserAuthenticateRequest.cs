@@ -1,4 +1,4 @@
-﻿namespace Erp.Backend.Module.PERSON.APPLICATION.DTOs.Requests.User
+﻿namespace Backend.Module.PERSON.APPLICATION.DTOs.Requests.User
 {
     public class UserAuthenticateRequest
     {

@@ -1,4 +1,4 @@
-﻿namespace Erp.Backend.Module.PERSON.APPLICATION.DTOs.Response
+﻿namespace Backend.Module.PERSON.APPLICATION.DTOs.Response
 {
     public class UserAuthenticateResponse
     {
