@@ -1,8 +1,8 @@
-﻿namespace Backend.Module.PERSON.DOMAIN.Services
+﻿namespace PeopleManagement.Domain.Services
 {
-    using Backend.Module.PERSON.DOMAIN.Entities;
-    using Backend.Module.PERSON.DOMAIN.Interfaces.Repositories;
-    using Backend.Module.PERSON.DOMAIN.Interfaces.Services;
+    using PeopleManagement.Domain.Entities;
+    using PeopleManagement.Domain.Interfaces.Repositories;
+    using PeopleManagement.Domain.Interfaces.Services;
 
     public class ServiceBase<TEntity> : IServiceBase<TEntity> where TEntity : EntityBase
     {

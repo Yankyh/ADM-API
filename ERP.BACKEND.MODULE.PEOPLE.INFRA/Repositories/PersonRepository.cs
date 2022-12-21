@@ -1,6 +1,6 @@
-﻿using Backend.Module.PERSON.DOMAIN.Entities;
-using Backend.Module.PERSON.DOMAIN.Interfaces.Repositories;
-using Backend.Module.PERSON.INFRA.Contexts;
+﻿using PeopleManagement.Domain.Entities;
+using PeopleManagement.Domain.Interfaces.Repositories;
+using PeopleManagement.Infra.Contexts;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Backend.Module.PERSON.INFRA.Repositories
+namespace PeopleManagement.Infra.Repositories
 {
     public class PersonRepository : RepositoryBase<Person>, IPersonRepository
     {

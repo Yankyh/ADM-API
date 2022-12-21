@@ -1,11 +1,11 @@
-﻿namespace Backend.Module.PERSON.APPLICATION.Services
+﻿namespace PeopleManagement.Application.Services
 {
     using AutoMapper;
-    using Backend.Module.PERSON.APPLICATION.DTOs;
-    using Backend.Module.PERSON.APPLICATION.DTOs.Requests.Person;
-    using Backend.Module.PERSON.APPLICATION.Interfaces;
-    using Backend.Module.PERSON.DOMAIN.Entities;
-    using Backend.Module.PERSON.DOMAIN.Interfaces.Services;
+    using PeopleManagement.Application.DTOs;
+    using PeopleManagement.Application.DTOs.Requests.Person;
+    using PeopleManagement.Application.Interfaces;
+    using PeopleManagement.Domain.Entities;
+    using PeopleManagement.Domain.Interfaces.Services;
 
     public class PersonApplication : ServiceApplicationBase<Person, PersonDTO, PersonGetAllRequest>, IPersonApplication
     {

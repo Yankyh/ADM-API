@@ -1,12 +1,12 @@
-﻿namespace Backend.Module.PERSON.APPLICATION.DependencyInjection
+﻿namespace PeopleManagement.Application.DependencyInjection
 {
-    using Backend.Module.PERSON.APPLICATION.Interfaces;
-    using Backend.Module.PERSON.APPLICATION.Services;
-    using Backend.Module.PERSON.DOMAIN.Interfaces.Repositories;
-    using Backend.Module.PERSON.DOMAIN.Interfaces.Services;
-    using Backend.Module.PERSON.DOMAIN.Services;
-    using Backend.Module.PERSON.INFRA.Contexts;
-    using Backend.Module.PERSON.INFRA.Repositories;
+    using PeopleManagement.Application.Interfaces;
+    using PeopleManagement.Application.Services;
+    using PeopleManagement.Domain.Interfaces.Repositories;
+    using PeopleManagement.Domain.Interfaces.Services;
+    using PeopleManagement.Domain.Services;
+    using PeopleManagement.Infra.Contexts;
+    using PeopleManagement.Infra.Repositories;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.DependencyInjection;
 

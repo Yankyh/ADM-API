@@ -1,4 +1,4 @@
-﻿namespace Backend.Module.PERSON.APPLICATION.DTOs
+﻿namespace PeopleManagement.Application.DTOs
 {
     public class BaseDTO
     {

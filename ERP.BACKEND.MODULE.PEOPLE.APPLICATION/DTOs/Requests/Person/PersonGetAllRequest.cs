@@ -1,4 +1,4 @@
-﻿namespace Backend.Module.PERSON.APPLICATION.DTOs.Requests.Person
+﻿namespace PeopleManagement.Application.DTOs.Requests.Person
 {
     public class PersonGetAllRequest : DefaultFilterRequest
     {

@@ -1,6 +1,6 @@
-﻿namespace Backend.Module.PERSON.DOMAIN.Extensions.Validators
+﻿namespace PeopleManagement.Domain.Extensions.Validators
 {
-    using Backend.Module.PERSON.DOMAIN.Entities;
+    using PeopleManagement.Domain.Entities;
     using System.ComponentModel.DataAnnotations;
 
     public static class UserValidator

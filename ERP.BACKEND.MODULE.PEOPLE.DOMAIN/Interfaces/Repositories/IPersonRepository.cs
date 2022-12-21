@@ -1,6 +1,6 @@
-﻿namespace Backend.Module.PERSON.DOMAIN.Interfaces.Repositories
+﻿namespace PeopleManagement.Domain.Interfaces.Repositories
 {
-    using Backend.Module.PERSON.DOMAIN.Entities;
+    using PeopleManagement.Domain.Entities;
 
     public interface IPersonRepository : IRepositoryBase<Person>
     {

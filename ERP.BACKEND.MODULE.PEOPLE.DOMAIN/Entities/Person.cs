@@ -1,6 +1,6 @@
-﻿namespace Backend.Module.PERSON.DOMAIN.Entities
+﻿namespace PeopleManagement.Domain.Entities
 {
-    using Backend.Module.PERSON.COMMON.Enums;
+    using PeopleManagement.Common.Tools.Enums;
     using System.ComponentModel.DataAnnotations;
 
     public class Person : EntityBase

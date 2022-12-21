@@ -1,8 +1,8 @@
-﻿namespace Backend.Module.PERSON.APPLICATION.Interfaces
+﻿namespace PeopleManagement.Application.Interfaces
 {
-    using Backend.Module.PERSON.APPLICATION.DTOs;
-    using Backend.Module.PERSON.APPLICATION.DTOs.Requests;
-    using Backend.Module.PERSON.DOMAIN.Entities;
+    using PeopleManagement.Application.DTOs;
+    using PeopleManagement.Application.DTOs.Requests;
+    using PeopleManagement.Domain.Entities;
 
     public interface IPersonApplication : IApplicationBase<Person, PersonDTO, DefaultFilterRequest>
     {

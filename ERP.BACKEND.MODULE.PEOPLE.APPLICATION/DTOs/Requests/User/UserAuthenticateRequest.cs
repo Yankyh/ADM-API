@@ -1,4 +1,4 @@
-﻿namespace Backend.Module.PERSON.APPLICATION.DTOs.Requests.User
+﻿namespace PeopleManagement.Application.DTOs.Requests.User
 {
     public class UserAuthenticateRequest
     {

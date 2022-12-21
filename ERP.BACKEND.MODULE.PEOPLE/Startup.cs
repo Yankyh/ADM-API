@@ -1,10 +1,10 @@
-﻿using Backend.Module.PERSON.APPLICATION.DependencyInjection;
-using Backend.Module.PERSON.APPLICATION.Mapping;
+﻿using PeopleManagement.Application.DependencyInjection;
+using PeopleManagement.Application.Mapping;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
-namespace Backend.Module.PERSON
+namespace PeopleManagement.Api
 {
     public class Startup
     {

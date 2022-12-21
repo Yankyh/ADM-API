@@ -1,4 +1,4 @@
-﻿namespace Backend.Module.PERSON.COMMON.Tools
+﻿namespace PeopleManagement.Common.Tools
 {
     using System.Security.Cryptography;
     using System.Text;

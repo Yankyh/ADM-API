@@ -1,4 +1,4 @@
-﻿namespace Backend.Module.PERSON.APPLICATION.DTOs.Response
+﻿namespace PeopleManagement.Application.DTOs.Response
 {
     using System.Net;
 

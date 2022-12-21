@@ -1,6 +1,6 @@
-﻿namespace Backend.Module.PERSON.APPLICATION.DTOs.Requests
+﻿namespace PeopleManagement.Application.DTOs.Requests
 {
-    using Backend.Module.PERSON.COMMON.Enums;
+    using PeopleManagement.Common.Tools.Enums;
 
     public class DefaultFilterRequest
     {

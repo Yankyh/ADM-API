@@ -1,4 +1,4 @@
-﻿namespace Backend.Module.PERSON.DOMAIN.Interfaces.Services
+﻿namespace PeopleManagement.Domain.Interfaces.Services
 {
     public interface IPersonService
     {

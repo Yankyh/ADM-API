@@ -1,8 +1,8 @@
-﻿namespace Backend.Module.PERSON.INFRA.Mapping
+﻿namespace PeopleManagement.Infra.Mapping
 {
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
     using Microsoft.EntityFrameworkCore;
-    using Backend.Module.PERSON.DOMAIN.Entities;
+    using PeopleManagement.Domain.Entities;
 
     public class BaseMap<T> : IEntityTypeConfiguration<T> where T : EntityBase
     {

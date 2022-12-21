@@ -1,9 +1,9 @@
-﻿namespace Backend.Module.PERSON.Controllers
+﻿namespace PeopleManagement.Api
 {
-    using Backend.Module.PERSON.APPLICATION.DTOs;
-    using Backend.Module.PERSON.APPLICATION.DTOs.Requests;
-    using Backend.Module.PERSON.APPLICATION.Interfaces;
-    using Backend.Module.PERSON.DOMAIN.Entities;
+    using PeopleManagement.Application.DTOs;
+    using PeopleManagement.Application.DTOs.Requests;
+    using PeopleManagement.Application.Interfaces;
+    using PeopleManagement.Domain.Entities;
     using Microsoft.AspNetCore.Mvc;
 
     [Produces("application/json")]

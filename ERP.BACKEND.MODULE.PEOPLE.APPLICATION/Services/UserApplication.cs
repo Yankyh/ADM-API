@@ -1,13 +1,13 @@
-﻿namespace Backend.Module.PERSON.APPLICATION.Services
+﻿namespace PeopleManagement.Application.Services
 {
     using AutoMapper;
-    using Backend.Module.PERSON.APPLICATION.DTOs;
-    using Backend.Module.PERSON.APPLICATION.DTOs.Requests;
-    using Backend.Module.PERSON.APPLICATION.DTOs.Requests.User;
-    using Backend.Module.PERSON.APPLICATION.DTOs.Response;
-    using Backend.Module.PERSON.APPLICATION.Interfaces;
-    using Backend.Module.PERSON.DOMAIN.Entities;
-    using Backend.Module.PERSON.DOMAIN.Interfaces.Services;
+    using PeopleManagement.Application.DTOs;
+    using PeopleManagement.Application.DTOs.Requests;
+    using PeopleManagement.Application.DTOs.Requests.User;
+    using PeopleManagement.Application.DTOs.Response;
+    using PeopleManagement.Application.Interfaces;
+    using PeopleManagement.Domain.Entities;
+    using PeopleManagement.Domain.Interfaces.Services;
 
     public class UserApplication : ServiceApplicationBase<User, UserDTO, DefaultFilterRequest>, IUserApplication
     {

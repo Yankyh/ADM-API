@@ -1,10 +1,10 @@
-﻿namespace Backend.Module.PERSON.DOMAIN.Services
+﻿namespace PeopleManagement.Domain.Services
 {
-    using Backend.Module.PERSON.COMMON.Tools;
-    using Backend.Module.PERSON.DOMAIN.Entities;
-    using Backend.Module.PERSON.DOMAIN.Extensions.Validators;
-    using Backend.Module.PERSON.DOMAIN.Interfaces.Repositories;
-    using Backend.Module.PERSON.DOMAIN.Interfaces.Services;
+    using PeopleManagement.Common.Tools;
+    using PeopleManagement.Domain.Entities;
+    using PeopleManagement.Domain.Extensions.Validators;
+    using PeopleManagement.Domain.Interfaces.Repositories;
+    using PeopleManagement.Domain.Interfaces.Services;
 
     public class UserService : ServiceBase<User>, IUserService
     {

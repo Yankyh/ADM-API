@@ -1,4 +1,4 @@
-﻿namespace Backend.Module.PERSON.DOMAIN.Entities
+﻿namespace PeopleManagement.Domain.Entities
 {
     using System.ComponentModel.DataAnnotations;
 

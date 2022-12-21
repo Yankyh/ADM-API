@@ -1,6 +1,6 @@
-﻿namespace Backend.Module.PERSON.DOMAIN.Interfaces.Services
+﻿namespace PeopleManagement.Domain.Interfaces.Services
 {
-    using Backend.Module.PERSON.DOMAIN.Entities;
+    using PeopleManagement.Domain.Entities;
 
     public interface IServiceBase<TEntity> where TEntity : EntityBase
     {
