@@ -1,13 +1,13 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.Services
+﻿namespace Erp.Backend.Module.PERSON.APPLICATION.Services
 {
     using AutoMapper;
-    using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs;
-    using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Requests;
-    using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Response;
-    using ERP.BACKEND.MODULE.PERSON.APPLICATION.Interfaces;
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Services;
-    using ERP.BACKEND.MODULE.PERSON.COMMON.Enums;
+    using Erp.Backend.Module.PERSON.APPLICATION.DTOs;
+    using Erp.Backend.Module.PERSON.APPLICATION.DTOs.Requests;
+    using Erp.Backend.Module.PERSON.APPLICATION.DTOs.Response;
+    using Erp.Backend.Module.PERSON.APPLICATION.Interfaces;
+    using Erp.Backend.Module.PERSON.DOMAIN.Entities;
+    using Erp.Backend.Module.PERSON.DOMAIN.Interfaces.Services;
+    using Erp.Backend.Module.PERSON.COMMON.Enums;
 
     public class ServiceApplicationBase<TEntity, TEntityDTO, TRequest> : IApplicationBase<TEntity, TEntityDTO, TRequest> where TEntity : EntityBase where TEntityDTO : BaseDTO where TRequest : DefaultFilterRequest
     {

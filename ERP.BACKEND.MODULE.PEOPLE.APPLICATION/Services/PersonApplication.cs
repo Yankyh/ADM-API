@@ -1,11 +1,11 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.Services
+﻿namespace Erp.Backend.Module.PERSON.APPLICATION.Services
 {
     using AutoMapper;
-    using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs;
-    using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Requests.Person;
-    using ERP.BACKEND.MODULE.PERSON.APPLICATION.Interfaces;
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Services;
+    using Erp.Backend.Module.PERSON.APPLICATION.DTOs;
+    using Erp.Backend.Module.PERSON.APPLICATION.DTOs.Requests.Person;
+    using Erp.Backend.Module.PERSON.APPLICATION.Interfaces;
+    using Erp.Backend.Module.PERSON.DOMAIN.Entities;
+    using Erp.Backend.Module.PERSON.DOMAIN.Interfaces.Services;
 
     public class PersonApplication : ServiceApplicationBase<Person, PersonDTO, PersonGetAllRequest>, IPersonApplication
     {

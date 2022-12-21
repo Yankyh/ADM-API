@@ -17,8 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ERP.BACKEND.MODULE.PEOPLE.APPLICATION\ERP.BACKEND.MODULE.PERSON.APPLICATION.csproj" />
-    <ProjectReference Include="..\ERP.BACKEND.MODULE.PEOPLE.DOMAIN\ERP.BACKEND.MODULE.PERSON.DOMAIN.csproj" />
+    <ProjectReference Include="..\Erp.Backend.Module.PEOPLE.APPLICATION\Erp.Backend.Module.PERSON.APPLICATION.csproj" />
+    <ProjectReference Include="..\Erp.Backend.Module.PEOPLE.DOMAIN\Erp.Backend.Module.PERSON.DOMAIN.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.COMMON.Enums
+﻿namespace Erp.Backend.Module.PERSON.COMMON.Enums
 {
     public enum OrderDirection
     {

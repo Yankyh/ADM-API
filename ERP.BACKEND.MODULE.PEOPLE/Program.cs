@@ -1,4 +1,4 @@
-using ERP.BACKEND.MODULE.PERSON;
+using Erp.Backend.Module.PERSON;
 using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);

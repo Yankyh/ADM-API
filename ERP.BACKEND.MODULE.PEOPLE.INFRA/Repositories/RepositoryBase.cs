@@ -1,8 +1,8 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.INFRA.Repositories
+﻿namespace Erp.Backend.Module.PERSON.INFRA.Repositories
 {
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Repositories;
-    using ERP.BACKEND.MODULE.PERSON.INFRA.Contexts;
+    using Erp.Backend.Module.PERSON.DOMAIN.Entities;
+    using Erp.Backend.Module.PERSON.DOMAIN.Interfaces.Repositories;
+    using Erp.Backend.Module.PERSON.INFRA.Contexts;
     using Microsoft.EntityFrameworkCore;
     using System;
     using System.Collections.Generic;

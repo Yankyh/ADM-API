@@ -1,8 +1,8 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.INFRA.Mapping
+﻿namespace Erp.Backend.Module.PERSON.INFRA.Mapping
 {
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
     using Microsoft.EntityFrameworkCore;
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
+    using Erp.Backend.Module.PERSON.DOMAIN.Entities;
 
     public class BaseMap<T> : IEntityTypeConfiguration<T> where T : EntityBase
     {

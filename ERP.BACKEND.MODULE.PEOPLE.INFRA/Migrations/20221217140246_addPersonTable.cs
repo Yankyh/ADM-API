@@ -1,4 +1,4 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.INFRA.Migrations
+﻿namespace Erp.Backend.Module.PERSON.INFRA.Migrations
 {
     using Microsoft.EntityFrameworkCore.Migrations;
     /// <inheritdoc />

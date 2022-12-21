@@ -1,4 +1,4 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Response
+﻿namespace Erp.Backend.Module.PERSON.APPLICATION.DTOs.Response
 {
     using System.Net;
 

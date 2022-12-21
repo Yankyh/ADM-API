@@ -1,4 +1,4 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Services
+﻿namespace Erp.Backend.Module.PERSON.DOMAIN.Interfaces.Services
 {
     public interface IPersonService
     {

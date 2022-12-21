@@ -1,6 +1,6 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.INFRA.Migrations
+﻿namespace Erp.Backend.Module.PERSON.INFRA.Migrations
 {
-    using ERP.BACKEND.MODULE.PERSON.INFRA.Contexts;
+    using Erp.Backend.Module.PERSON.INFRA.Contexts;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Infrastructure;
 
@@ -15,7 +15,7 @@
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities.Person", b =>
+            modelBuilder.Entity("Erp.Backend.Module.PERSON.DOMAIN.Entities.Person", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -49,7 +49,7 @@
                     b.ToTable("Person", String.Empty);
                 });
 
-            modelBuilder.Entity("ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities.User", b =>
+            modelBuilder.Entity("Erp.Backend.Module.PERSON.DOMAIN.Entities.User", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()

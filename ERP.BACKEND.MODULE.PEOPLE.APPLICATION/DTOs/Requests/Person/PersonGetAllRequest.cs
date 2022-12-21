@@ -1,4 +1,4 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Requests.Person
+﻿namespace Erp.Backend.Module.PERSON.APPLICATION.DTOs.Requests.Person
 {
     public class PersonGetAllRequest : DefaultFilterRequest
     {

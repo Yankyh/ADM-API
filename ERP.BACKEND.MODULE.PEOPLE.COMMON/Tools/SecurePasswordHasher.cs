@@ -1,4 +1,4 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.COMMON.Tools
+﻿namespace Erp.Backend.Module.PERSON.COMMON.Tools
 {
     using System.Security.Cryptography;
     using System.Text;

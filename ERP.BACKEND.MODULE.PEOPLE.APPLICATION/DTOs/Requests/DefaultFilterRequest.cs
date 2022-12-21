@@ -1,6 +1,6 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Requests
+﻿namespace Erp.Backend.Module.PERSON.APPLICATION.DTOs.Requests
 {
-    using ERP.BACKEND.MODULE.PERSON.COMMON.Enums;
+    using Erp.Backend.Module.PERSON.COMMON.Enums;
 
     public class DefaultFilterRequest
     {

@@ -1,9 +1,9 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.Controllers
+﻿namespace Erp.Backend.Module.PERSON.Controllers
 {
-    using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs;
-    using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Requests.User;
-    using ERP.BACKEND.MODULE.PERSON.APPLICATION.Interfaces;
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
+    using Erp.Backend.Module.PERSON.APPLICATION.DTOs;
+    using Erp.Backend.Module.PERSON.APPLICATION.DTOs.Requests.User;
+    using Erp.Backend.Module.PERSON.APPLICATION.Interfaces;
+    using Erp.Backend.Module.PERSON.DOMAIN.Entities;
     using Microsoft.AspNetCore.Mvc;
 
     [ApiController]

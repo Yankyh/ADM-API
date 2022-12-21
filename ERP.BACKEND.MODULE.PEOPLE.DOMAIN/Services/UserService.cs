@@ -1,10 +1,10 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Services
+﻿namespace Erp.Backend.Module.PERSON.DOMAIN.Services
 {
-    using ERP.BACKEND.MODULE.PERSON.COMMON.Tools;
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Extensions.Validators;
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Repositories;
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Services;
+    using Erp.Backend.Module.PERSON.COMMON.Tools;
+    using Erp.Backend.Module.PERSON.DOMAIN.Entities;
+    using Erp.Backend.Module.PERSON.DOMAIN.Extensions.Validators;
+    using Erp.Backend.Module.PERSON.DOMAIN.Interfaces.Repositories;
+    using Erp.Backend.Module.PERSON.DOMAIN.Interfaces.Services;
 
     public class UserService : ServiceBase<User>, IUserService
     {

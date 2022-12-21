@@ -1,6 +1,6 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Services
+﻿namespace Erp.Backend.Module.PERSON.DOMAIN.Interfaces.Services
 {
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
+    using Erp.Backend.Module.PERSON.DOMAIN.Entities;
 
     public interface IServiceBase<TEntity> where TEntity : EntityBase
     {

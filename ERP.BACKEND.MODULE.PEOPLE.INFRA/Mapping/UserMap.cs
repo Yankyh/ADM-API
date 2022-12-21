@@ -1,6 +1,6 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.INFRA.Mapping
+﻿namespace Erp.Backend.Module.PERSON.INFRA.Mapping
 {
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
+    using Erp.Backend.Module.PERSON.DOMAIN.Entities;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
