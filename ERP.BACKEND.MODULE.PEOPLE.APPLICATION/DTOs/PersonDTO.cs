@@ -1,6 +1,6 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs
+﻿namespace PeopleManagement.Application.DTOs
 {
-    using ERP.BACKEND.MODULE.PERSON.COMMON.Enums;
+    using PeopleManagement.Common.Tools.Enums;
 
     public class PersonDTO : BaseDTO
     {

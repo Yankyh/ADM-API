@@ -1,4 +1,4 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs
+﻿namespace PeopleManagement.Application.DTOs
 {
     public class UserDTO : BaseDTO
     {

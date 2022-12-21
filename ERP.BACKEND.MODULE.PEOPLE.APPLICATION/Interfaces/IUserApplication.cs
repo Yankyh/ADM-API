@@ -1,10 +1,10 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.Interfaces
+﻿namespace PeopleManagement.Application.Interfaces
 {
-    using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs;
-    using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Requests;
-    using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Requests.User;
-    using ERP.BACKEND.MODULE.PERSON.APPLICATION.DTOs.Response;
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
+    using PeopleManagement.Application.DTOs;
+    using PeopleManagement.Application.DTOs.Requests;
+    using PeopleManagement.Application.DTOs.Requests.User;
+    using PeopleManagement.Application.DTOs.Response;
+    using PeopleManagement.Domain.Entities;
 
     public interface IUserApplication : IApplicationBase<User, UserDTO, DefaultFilterRequest>
     {

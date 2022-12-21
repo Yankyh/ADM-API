@@ -1,6 +1,6 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.INFRA.Mapping
+﻿namespace PeopleManagement.Infra.Mapping
 {
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
+    using PeopleManagement.Domain.Entities;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

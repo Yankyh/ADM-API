@@ -1,6 +1,6 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Extensions.Validators
+﻿namespace PeopleManagement.Domain.Extensions.Validators
 {
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
+    using PeopleManagement.Domain.Entities;
     using System.ComponentModel.DataAnnotations;
 
     public static class UserValidator

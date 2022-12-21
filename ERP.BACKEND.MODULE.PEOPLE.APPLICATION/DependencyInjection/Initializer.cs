@@ -1,12 +1,12 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.APPLICATION.DependencyInjection
+﻿namespace PeopleManagement.Application.DependencyInjection
 {
-    using ERP.BACKEND.MODULE.PERSON.APPLICATION.Interfaces;
-    using ERP.BACKEND.MODULE.PERSON.APPLICATION.Services;
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Repositories;
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Services;
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Services;
-    using ERP.BACKEND.MODULE.PERSON.INFRA.Contexts;
-    using ERP.BACKEND.MODULE.PERSON.INFRA.Repositories;
+    using PeopleManagement.Application.Interfaces;
+    using PeopleManagement.Application.Services;
+    using PeopleManagement.Domain.Interfaces.Repositories;
+    using PeopleManagement.Domain.Interfaces.Services;
+    using PeopleManagement.Domain.Services;
+    using PeopleManagement.Infra.Contexts;
+    using PeopleManagement.Infra.Repositories;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.DependencyInjection;
 

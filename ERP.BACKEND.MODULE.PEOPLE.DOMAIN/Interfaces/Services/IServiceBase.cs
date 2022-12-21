@@ -1,6 +1,6 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Services
+﻿namespace PeopleManagement.Domain.Interfaces.Services
 {
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
+    using PeopleManagement.Domain.Entities;
 
     public interface IServiceBase<TEntity> where TEntity : EntityBase
     {

@@ -1,4 +1,4 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities
+﻿namespace PeopleManagement.Domain.Entities
 {
     using System.ComponentModel.DataAnnotations;
 

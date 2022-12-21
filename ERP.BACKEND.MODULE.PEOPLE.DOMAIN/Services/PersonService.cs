@@ -1,8 +1,8 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Services
+﻿namespace PeopleManagement.Domain.Services
 {
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Repositories;
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Services;
+    using PeopleManagement.Domain.Entities;
+    using PeopleManagement.Domain.Interfaces.Repositories;
+    using PeopleManagement.Domain.Interfaces.Services;
 
     public class PersonService : ServiceBase<Person>, IPersonService
     {

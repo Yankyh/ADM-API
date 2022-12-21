@@ -1,4 +1,4 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.COMMON.Enums
+﻿namespace PeopleManagement.Common.Tools.Enums
 {
     public enum PersonType
     {

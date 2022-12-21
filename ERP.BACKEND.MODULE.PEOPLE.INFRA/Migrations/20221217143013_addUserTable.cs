@@ -1,4 +1,4 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.INFRA.Migrations
+﻿namespace PeopleManagement.Infra.Migrations
 {
     using Microsoft.EntityFrameworkCore.Migrations;
 

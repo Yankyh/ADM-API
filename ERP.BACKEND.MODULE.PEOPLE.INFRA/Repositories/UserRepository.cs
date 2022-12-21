@@ -1,6 +1,6 @@
-﻿using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
-using ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Repositories;
-using ERP.BACKEND.MODULE.PERSON.INFRA.Contexts;
+﻿using PeopleManagement.Domain.Entities;
+using PeopleManagement.Domain.Interfaces.Repositories;
+using PeopleManagement.Infra.Contexts;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ERP.BACKEND.MODULE.PERSON.INFRA.Repositories
+namespace PeopleManagement.Infra.Repositories
 {
     public class UserRepository : RepositoryBase<User>, IUserRepository
     {

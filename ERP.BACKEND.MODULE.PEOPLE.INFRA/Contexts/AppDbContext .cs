@@ -1,6 +1,6 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.INFRA.Contexts
+﻿namespace PeopleManagement.Infra.Contexts
 {
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
+    using PeopleManagement.Domain.Entities;
     using Microsoft.EntityFrameworkCore;
 
     public class AppDbContext: DbContext

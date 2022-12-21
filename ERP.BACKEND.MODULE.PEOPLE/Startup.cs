@@ -1,10 +1,10 @@
-﻿using ERP.BACKEND.MODULE.PERSON.APPLICATION.DependencyInjection;
-using ERP.BACKEND.MODULE.PERSON.APPLICATION.Mapping;
+﻿using PeopleManagement.Application.DependencyInjection;
+using PeopleManagement.Application.Mapping;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
-namespace ERP.BACKEND.MODULE.PERSON
+namespace PeopleManagement.Api
 {
     public class Startup
     {

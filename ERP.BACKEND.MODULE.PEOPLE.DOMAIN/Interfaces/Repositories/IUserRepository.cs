@@ -1,6 +1,6 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Repositories
+﻿namespace PeopleManagement.Domain.Interfaces.Repositories
 {
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
+    using PeopleManagement.Domain.Entities;
 
     public interface IUserRepository : IRepositoryBase<User>
     {

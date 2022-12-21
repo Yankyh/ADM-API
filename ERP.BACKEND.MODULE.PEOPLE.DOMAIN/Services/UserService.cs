@@ -1,10 +1,10 @@
-﻿namespace ERP.BACKEND.MODULE.PERSON.DOMAIN.Services
+﻿namespace PeopleManagement.Domain.Services
 {
-    using ERP.BACKEND.MODULE.PERSON.COMMON.Tools;
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Entities;
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Extensions.Validators;
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Repositories;
-    using ERP.BACKEND.MODULE.PERSON.DOMAIN.Interfaces.Services;
+    using PeopleManagement.Common.Tools;
+    using PeopleManagement.Domain.Entities;
+    using PeopleManagement.Domain.Extensions.Validators;
+    using PeopleManagement.Domain.Interfaces.Repositories;
+    using PeopleManagement.Domain.Interfaces.Services;
 
     public class UserService : ServiceBase<User>, IUserService
     {

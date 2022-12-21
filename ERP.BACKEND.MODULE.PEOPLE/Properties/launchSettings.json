@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "ERP.BACKEND.MODULE.PERSON": {
+    "PeopleManagement.Api": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
