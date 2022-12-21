@@ -14,6 +14,24 @@
             this._repository = repository;
         }
 
+        public override async Task<User> GetById(Guid id)
+        {
+            User user = new User { Id = id };
+
+            await user.ValidateGet(_repository);
+
+            return await _repository.GetById(id); 
+        }
+
+        public override async Task<bool> Delete(Guid id)
+        {
+            User user = new User { Id = id };
+
+            await user.ValidateDelete(_repository);
+
+            return await repository.Delete(id);
+        }
+
         public override async Task<User> Add(User entity)
         {
             await entity.ValidateAdd(_repository);
@@ -22,7 +40,12 @@
             return await repository.Add(entity);
         }
 
-        public async Task<User> Authenticate(User entity) => await _repository.GetByName(entity.Name) ?? throw new Exception($"The user {entity.Name} is invalid!");
+        public async Task<User> Authentication(User entity)
+        {
+            await entity.ValidateDelete(_repository);
+
+            return await _repository.GetByName(entity.Name);
+        } 
 
         public virtual Task<IEnumerable<User>> GetAll() => repository.GetAll();
 

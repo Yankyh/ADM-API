@@ -9,7 +9,7 @@
 
     public interface IUserApplication : IApplicationBase<User, UserDTO, DefaultFilterRequest>
     {
-        Task<ResponseBase<UserAuthenticateResponse>> Authenticate(UserAuthenticateRequest entity);
+        Task<ResponseBase<UserAuthenticationResponse>> Authentication(UserAuthenticationRequest entity);
         Task<ResponseBase<IEnumerable<UserDTO>>> GetAll(UserGetAllRequest request);
         Task<ResponseBase<UserUpdateResponse>> Update(UserUpdateRequest entity);
     }

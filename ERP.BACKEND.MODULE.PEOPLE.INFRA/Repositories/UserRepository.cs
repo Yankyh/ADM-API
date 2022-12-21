@@ -14,8 +14,8 @@ namespace PeopleManagement.Infra.Repositories
     {
         public UserRepository(AppDbContext appDbContext) : base(appDbContext) { }
 
-        public async Task<User?> GetByName(string user) => await appDbContext.Set<User>().FirstOrDefaultAsync(x => x.Name.Equals(user));
+        public async Task<User?> GetByName(string user) => await appDbContext.Set<User>().AsNoTracking().FirstOrDefaultAsync(x => x.Name.Equals(user));
 
-        public async Task<User?> GetByEmail(string email) => await appDbContext.Set<User>().FirstOrDefaultAsync(x => x.Email.Equals(email));
+        public async Task<User?> GetByEmail(string email) => await appDbContext.Set<User>().AsNoTracking().FirstOrDefaultAsync(x => x.Email.Equals(email));
     }
 }

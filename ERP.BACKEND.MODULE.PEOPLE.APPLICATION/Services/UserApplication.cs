@@ -18,9 +18,9 @@
             this._service = service;
         }
 
-        public async Task<ResponseBase<UserAuthenticateResponse>> Authenticate(UserAuthenticateRequest entity)
+        public async Task<ResponseBase<UserAuthenticationResponse>> Authentication(UserAuthenticationRequest entity)
         {
-            return iMapper.Map<ResponseBase<UserAuthenticateResponse>>(await _service.Authenticate(iMapper.Map<User>(entity)));
+            return iMapper.Map<ResponseBase<UserAuthenticationResponse>>(await _service.Authentication(iMapper.Map<User>(entity)));
         }
 
         public async Task<ResponseBase<IEnumerable<UserDTO>>> GetAll(UserGetAllRequest request)

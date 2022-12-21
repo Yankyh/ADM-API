@@ -4,7 +4,7 @@
 
     public interface IUserService
     {
-        Task<User> Authenticate(User entity);
+        Task<User> Authentication(User entity);
         Task<IEnumerable<User>> GetAll();
     }
 }

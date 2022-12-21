@@ -33,12 +33,12 @@
         }
 
         [HttpPost]
-        [Route("Authenticate")]
-        public async Task<IActionResult> Authenticate(UserAuthenticateRequest user)
+        [Route("Authentication")]
+        public async Task<IActionResult> Authenticate(UserAuthenticationRequest user)
         {
             try
             {
-                var entity = await _app.Authenticate(user);
+                var entity = await _app.Authentication(user);
                 return new OkObjectResult(entity);
             }
             catch (Exception ex)
