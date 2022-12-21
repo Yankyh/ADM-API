@@ -56,9 +56,9 @@
             }
         }
 
-        public async Task<IEnumerable<TEntity>> GetAll() => await appDbContext.Set<TEntity>().ToListAsync();
+        public async Task<IEnumerable<TEntity>> GetAll() => await appDbContext.Set<TEntity>().AsNoTracking().ToListAsync();
 
-        public async Task<TEntity?> GetById(Guid id) => await appDbContext.Set<TEntity>().FirstOrDefaultAsync(x => x.Id == id);
+        public async Task<TEntity?> GetById(Guid id) => await appDbContext.Set<TEntity>().AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
 
         public async Task<TEntity> Update(TEntity entity)
         {

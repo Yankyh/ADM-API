@@ -5,6 +5,7 @@
     using PeopleManagement.Application.DTOs.Requests;
     using PeopleManagement.Application.DTOs.Requests.User;
     using PeopleManagement.Application.DTOs.Response;
+    using PeopleManagement.Application.DTOs.Response.User;
     using PeopleManagement.Application.Interfaces;
     using PeopleManagement.Domain.Entities;
     using PeopleManagement.Domain.Interfaces.Services;
@@ -29,6 +30,11 @@
             entities = Filter(request, entities);
 
             return iMapper.Map<ResponseBase<IEnumerable<UserDTO>>>(entities);
+        }
+
+        public async Task<ResponseBase<UserUpdateResponse>> Update(UserUpdateRequest entity)
+        {
+            return iMapper.Map<ResponseBase<UserUpdateResponse>>(await service.Update(iMapper.Map<User>(entity)));
         }
     }
 }

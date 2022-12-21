@@ -17,8 +17,8 @@
             this._app = app;
         }
 
-        [HttpPost]
-        [Route("GetAll")]
+        [HttpGet]
+        [Route("")]
         public async Task<IActionResult> GetAll([FromQuery] UserGetAllRequest request)
         {
             try
@@ -28,7 +28,7 @@
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return StatusCode(500, ex.Message);
             }
         }
 
@@ -40,6 +40,19 @@
             {
                 var entity = await _app.Authenticate(user);
                 return new OkObjectResult(entity);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> Update([FromBody] UserUpdateRequest data)
+        {
+            try
+            {
+                return new OkObjectResult(await _app.Update(data));
             }
             catch (Exception ex)
             {
