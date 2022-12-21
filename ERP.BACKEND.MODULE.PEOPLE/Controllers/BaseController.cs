@@ -48,7 +48,7 @@
             }
         }
 
-        [HttpPut]
+       /* [HttpPut]
         public async Task<IActionResult> Update([FromBody] EntityDTO data)
         {
             try
@@ -59,7 +59,7 @@
             {
                 return BadRequest(ex.Message);
             }
-        }
+        }*/
 
         [HttpDelete]
         [Route("{id}")]

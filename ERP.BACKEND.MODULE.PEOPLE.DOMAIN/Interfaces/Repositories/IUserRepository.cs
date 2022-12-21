@@ -5,5 +5,6 @@
     public interface IUserRepository : IRepositoryBase<User>
     {
         Task<User?> GetByName(string name);
+        Task<User?> GetByEmail(string name);
     }
 }
