@@ -13,13 +13,13 @@
         {
             CreateMap<Person, PersonDTO>();
             CreateMap<PersonDTO, Person>();
-         //   CreateMap<PersonDTO, ResponseBase<UserAuthenticateResponse>>().ForMember(x => x.Response, map => map.MapFrom(y => y));
+         //   CreateMap<PersonDTO, ResponseBase<UserAuthenticationResponse>>().ForMember(x => x.Response, map => map.MapFrom(y => y));
 
             CreateMap<User, UserDTO>();
             CreateMap<UserDTO, User>();
-            CreateMap<UserAuthenticateRequest, User>();
-            CreateMap<User, UserAuthenticateResponse>();
-            CreateMap<User, ResponseBase<UserAuthenticateResponse>>().ForMember(x => x.Response, map => map.MapFrom(y => y));
+            CreateMap<UserAuthenticationRequest, User>();
+            CreateMap<User, UserAuthenticationResponse>();
+            CreateMap<User, ResponseBase<UserAuthenticationResponse>>().ForMember(x => x.Response, map => map.MapFrom(y => y));
             CreateMap<User, ResponseBase<UserDTO>>().ForMember(x => x.Response, map => map.MapFrom(y => y));
             CreateMap<User, ResponseBase>();
             CreateMap<ResponseBase<UserDTO>, UserDTO>();
