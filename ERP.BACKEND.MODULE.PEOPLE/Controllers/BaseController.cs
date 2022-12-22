@@ -61,7 +61,7 @@
             }
         }*/
 
-        [HttpDelete]
+      /*  [HttpDelete]
         [Route("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
@@ -73,6 +73,6 @@
             {
                 return BadRequest(ex.Message);
             }
-        }
+        }*/
     }
 }
