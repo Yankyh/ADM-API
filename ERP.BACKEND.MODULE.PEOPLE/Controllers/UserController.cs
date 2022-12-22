@@ -33,6 +33,19 @@
         }
 
         [HttpPost]
+        public async Task<IActionResult> Add([FromBody] UserAddRequest request)
+        {
+            try
+            {
+                return new OkObjectResult(await _app.Add(request));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost]
         [Route("Authentication")]
         public async Task<IActionResult> Authenticate(UserAuthenticationRequest user)
         {

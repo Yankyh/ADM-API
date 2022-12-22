@@ -28,6 +28,10 @@
             CreateMap<User, UserUpdateResponse>();
             CreateMap<User, ResponseBase<UserUpdateResponse>>().ForMember(x => x.Response, map => map.MapFrom(y => y));
 
+            CreateMap<UserAddRequest, User>();
+            CreateMap<User, UserAddResponse>();
+            CreateMap<User, ResponseBase<UserAddResponse>>().ForMember(x => x.Response, map => map.MapFrom(y => y));
+
             CreateMap<IEnumerable<User>, ResponseBase<IEnumerable<UserDTO>>>().ForMember(x => x.Response, map => map.MapFrom(y => y));
             CreateMap<UserDTO, ResponseBase>();
         }
