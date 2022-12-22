@@ -36,7 +36,7 @@
 
         public static async Task ValidateUpdate(this User user, IUserRepository repository)
         {
-            var userExistent = await GetUser(user, repository);
+            var userExistent = await GetUserById(user, repository);
 
             if (userExistent == null)
             {
@@ -55,6 +55,16 @@
         }
 
         public static async Task ValidateDelete(this User user, IUserRepository repository)
+        {
+            var userExistent = await GetUserById(user, repository);
+
+            if (userExistent == null)
+            {
+                throw new InvalidDataException($"Usuário não encontrado.");
+            }
+        }
+
+        public static async Task ValidateAuthentication(this User user, IUserRepository repository)
         {
             var userExistent = await GetUser(user, repository);
 

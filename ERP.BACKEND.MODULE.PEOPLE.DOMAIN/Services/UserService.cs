@@ -37,12 +37,15 @@
             await entity.ValidateAdd(_repository);
 
             entity.Password = SecurePasswordHasher.Hash(entity.Password);
+
+            entity.Name = RegexTool.NormalizeUserName(entity.Name);
+
             return await repository.Add(entity);
         }
 
         public async Task<User> Authentication(User entity)
         {
-            await entity.ValidateDelete(_repository);
+            await entity.ValidateAuthentication(_repository);
 
             return await _repository.GetByName(entity.Name);
         } 
@@ -53,7 +56,7 @@
         {
             await entity.ValidateUpdate(_repository);
 
-            var userExistent = await _repository.GetByName(entity.Name);
+            var userExistent = await _repository.GetById(entity.Id);
 
             if (userExistent != null)
             {
@@ -61,6 +64,8 @@
                 {
                     entity.Password = SecurePasswordHasher.Hash(entity.Password);
                 }
+
+                entity.Name = RegexTool.NormalizeUserName(entity.Name);
 
                 return await repository.Update(entity);
             }
