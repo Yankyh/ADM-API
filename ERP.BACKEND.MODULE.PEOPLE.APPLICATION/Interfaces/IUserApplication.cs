@@ -12,5 +12,6 @@
         Task<ResponseBase<UserAuthenticationResponse>> Authentication(UserAuthenticationRequest entity);
         Task<ResponseBase<IEnumerable<UserDTO>>> GetAll(UserGetAllRequest request);
         Task<ResponseBase<UserUpdateResponse>> Update(UserUpdateRequest entity);
+        Task<ResponseBase<UserAddResponse>> Add(UserAddRequest entity);
     }
 }
