@@ -16,5 +16,9 @@ namespace PeopleManagement.Infra.Repositories
         public PersonRepository(AppDbContext appDbContext) : base(appDbContext)
         {
         }
+
+        public async Task<Person?> GetByName(string user) => await appDbContext.Set<Person>().AsNoTracking().FirstOrDefaultAsync(x => x.Name.Equals(user));
+
+        public async Task<Person?> GetByCpfCnpj(string cpfCnpj) => await appDbContext.Set<Person>().AsNoTracking().FirstOrDefaultAsync(x => x.CpfCnpj.Equals(cpfCnpj));
     }
 }
