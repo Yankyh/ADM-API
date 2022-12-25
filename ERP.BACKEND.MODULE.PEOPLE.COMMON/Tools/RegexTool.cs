@@ -14,5 +14,10 @@ namespace PeopleManagement.Common.Tools
         {
             return Regex.Replace(userName, "[^0-9a-zA-Z]+", "");
         }
+
+        public static string NormalizeOnlyNumbers(string text)
+        {
+            return Regex.Replace(text, "[^0-9]+", "");
+        }
     }
 }
