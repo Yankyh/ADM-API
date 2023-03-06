@@ -35,7 +35,7 @@
             }
         }
 
-        [HttpPost]
+     /*   [HttpPost]
         public async Task<IActionResult> Add([FromBody] EntityDTO data)
         {
             try
@@ -46,7 +46,7 @@
             {
                 return BadRequest(ex.Message);
             }
-        }
+        }*/
 
        /* [HttpPut]
         public async Task<IActionResult> Update([FromBody] EntityDTO data)
@@ -61,7 +61,7 @@
             }
         }*/
 
-        [HttpDelete]
+      /*  [HttpDelete]
         [Route("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
@@ -73,6 +73,6 @@
             {
                 return BadRequest(ex.Message);
             }
-        }
+        }*/
     }
 }

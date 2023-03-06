@@ -36,5 +36,10 @@
         {
             return iMapper.Map<ResponseBase<UserUpdateResponse>>(await service.Update(iMapper.Map<User>(entity)));
         }
+
+        public async Task<ResponseBase<UserAddResponse>> Add(UserAddRequest entity)
+        {
+            return iMapper.Map<ResponseBase<UserAddResponse>>(await service.Add(iMapper.Map<User>(entity)));
+        }
     }
 }
