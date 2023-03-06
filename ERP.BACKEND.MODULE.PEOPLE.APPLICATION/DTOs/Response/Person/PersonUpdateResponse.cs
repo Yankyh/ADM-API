@@ -1,20 +1,20 @@
-﻿namespace PeopleManagement.Domain.Entities
-{
-    using PeopleManagement.Common.Tools.Enums;
-    using System.ComponentModel.DataAnnotations;
+﻿using PeopleManagement.Common.Tools.Enums;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-    public class Person : EntityBase
+namespace PeopleManagement.Application.DTOs.Response.Person
+{
+    public class PersonUpdateResponse
     {
-        [Required]
         public string Name { get; set; } = string.Empty;
         public string? CorporateName { get; set; }
         public DateTime? BirthDate { get; set; }
         public SexEnum? Sex { get; set; }
-        [Required]
         public string CpfCnpj { get; set; } = string.Empty;
-        [Required]
         public PersonType Type { get; set; }
         public string? StateRegistration { get; set; }
-        public List<PersonContact> PersonContacts { get; set; }
     }
 }

@@ -4,6 +4,7 @@
 
     public class PersonDTO : BaseDTO
     {
+        public Guid Id { get; set; } = Guid.Empty;
         public string Name { get; set; } = string.Empty;
         public string? CorporateName { get; set; }
         public DateTime? BirthDate { get; set; }

@@ -1,18 +1,16 @@
-﻿namespace PeopleManagement.Api
-{
-    using PeopleManagement.Application.DTOs;
-    using PeopleManagement.Application.Interfaces;
-    using PeopleManagement.Domain.Entities;
-    using Microsoft.AspNetCore.Mvc;
-    using PeopleManagement.Application.DTOs.Requests.Person;
+﻿using Microsoft.AspNetCore.Mvc;
+using PeopleManagement.Application.DTOs.Requests.Person;
+using PeopleManagement.Application.DTOs.Requests.PersonContact;
+using PeopleManagement.Application.Interfaces;
 
+namespace PeopleManagement.Api.Controllers
+{
     [ApiController]
     [Route("api/[controller]")]
-
-    public class PersonController : Controller
+    public class PersonContactController : Controller
     {
-        IPersonApplication _application;
-        public PersonController(IPersonApplication application)
+        IPersonContactApplication _application;
+        public PersonContactController(IPersonContactApplication application)
         {
             this._application = application;
         }
@@ -33,7 +31,7 @@
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll([FromQuery] PersonGetAllRequest request)
+        public async Task<IActionResult> GetAll([FromQuery] PersonContactGetAllRequest request)
         {
             try
             {
@@ -47,7 +45,7 @@
         }
 
         [HttpPost]
-        public async Task<IActionResult> Add([FromBody] PersonAddRequest request)
+        public async Task<IActionResult> Add([FromBody] PersonContactAddRequest request)
         {
             try
             {
@@ -61,7 +59,7 @@
 
         [HttpPut]
         [Route("{id}")]
-        public async Task<IActionResult> Update(Guid id, [FromBody] PersonUpdateRequest data)
+        public async Task<IActionResult> Update(Guid id, [FromBody] PersonContactUpdateRequest data)
         {
             try
             {
