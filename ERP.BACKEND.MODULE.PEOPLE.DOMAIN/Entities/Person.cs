@@ -15,5 +15,6 @@
         [Required]
         public PersonType Type { get; set; }
         public string? StateRegistration { get; set; }
+        public List<PersonContact> PersonContacts { get; set; }
     }
 }
