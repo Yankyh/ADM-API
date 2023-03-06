@@ -4,5 +4,7 @@
 
     public interface IPersonRepository : IRepositoryBase<Person>
     {
+        Task<Person?> GetByName(string name);
+        Task<Person?> GetByCpfCnpj(string name);
     }
 }

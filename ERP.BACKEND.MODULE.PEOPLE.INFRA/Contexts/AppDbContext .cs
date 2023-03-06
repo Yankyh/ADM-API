@@ -14,6 +14,12 @@
         {
             modelBuilder.Entity<Person>().ToTable("Person");
             modelBuilder.Entity<User>().ToTable("User");
+            modelBuilder.Entity<PersonContact>()
+            .ToTable("PersonContact")
+            .HasOne(p => p.Person)
+            .WithMany(pc => pc.PersonContacts)
+            .HasForeignKey(p => p.PersonId);
+
         }
     }
 }

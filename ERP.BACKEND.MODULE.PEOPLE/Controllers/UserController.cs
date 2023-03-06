@@ -9,21 +9,35 @@
     [ApiController]
     [Route("api/[controller]")]
 
-    public class UserController : BaseController<User, UserDTO>
+    public class UserController : Controller
     {
-        IUserApplication _app;
-        public UserController(IUserApplication app) : base(app)
+        IUserApplication _application;
+        public UserController(IUserApplication application)
         {
-            this._app = app;
+            this._application = application;
         }
 
         [HttpGet]
-        [Route("")]
+        [Route("{id}")]
+        public async Task<IActionResult> GetById(Guid id)
+        {
+            try
+            {
+                var entity = await _application.GetById(id);
+                return new OkObjectResult(entity);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
         public async Task<IActionResult> GetAll([FromQuery] UserGetAllRequest request)
         {
             try
             {
-                var entity = await _app.GetAll(request);
+                var entity = await _application.GetAll(request);
                 return new OkObjectResult(entity);
             }
             catch (Exception ex)
@@ -33,12 +47,25 @@
         }
 
         [HttpPost]
+        public async Task<IActionResult> Add([FromBody] UserAddRequest request)
+        {
+            try
+            {
+                return new OkObjectResult(await _application.Add(request));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost]
         [Route("Authentication")]
         public async Task<IActionResult> Authenticate(UserAuthenticationRequest user)
         {
             try
             {
-                var entity = await _app.Authentication(user);
+                var entity = await _application.Authentication(user);
                 return new OkObjectResult(entity);
             }
             catch (Exception ex)
@@ -48,11 +75,27 @@
         }
 
         [HttpPut]
-        public async Task<IActionResult> Update([FromBody] UserUpdateRequest data)
+        [Route("{id}")]
+        public async Task<IActionResult> Update(Guid id, [FromBody] UserUpdateRequest data)
         {
             try
             {
-                return new OkObjectResult(await _app.Update(data));
+                data.Id = id;
+                return new OkObjectResult(await _application.Update(data));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpDelete]
+        [Route("{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            try
+            {
+                return new OkObjectResult(await _application.Delete(id));
             }
             catch (Exception ex)
             {
